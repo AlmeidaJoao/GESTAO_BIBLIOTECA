@@ -1,3 +1,3 @@
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/CMakeFiles/Gestao_Biblioteca.dir
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/CMakeFiles/Gestao_Biblioteca.dir
+/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/CMakeFiles/edit_cache.dir
