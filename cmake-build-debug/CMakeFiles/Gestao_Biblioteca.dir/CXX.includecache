@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.cpp
+stdlib.h
+-
+stdio.h
+-
+Documento.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
+
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
+Exemplar.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h
+Leitor.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h
+
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h
+iostream
+-
+string
+-
+
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h
+Exemplar.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h
+Leitor.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h
+
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h
+string
+-
+ExemplarLivro.h
+/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h
+

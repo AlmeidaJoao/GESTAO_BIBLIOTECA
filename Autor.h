@@ -2,10 +2,12 @@
 // Created by nozotrox on 10/4/19.
 //
 #include <string>
+#include "Documento.h"
+
 #ifndef GESTAO_BIBLIOTECA_AUTOR_H
 #define GESTAO_BIBLIOTECA_AUTOR_H
 
-#include "Documento.h"
+
 using namespace std;
 
 class Autor {
@@ -20,7 +22,7 @@ public :
     string getNome();
     Documento* getDocumentos();
     void setNome(string nome);
-    void setDocumentos(Documento* documentos*);
+    void setDocumentos(Documento* documentos);
 
 };
 

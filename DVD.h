@@ -6,7 +6,9 @@
 #define GESTAO_BIBLIOTECA_DVD_H
 
 
-class DVD: ~Documento{
+#include "Documento.h"
+
+class DVD: public Documento{
     int duracao; //::>> em segundos
 public:
     DVD();

@@ -1,4 +1,4 @@
-# Install script for directory: /home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA
+# Install script for directory: /mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -9,6 +9,8 @@
 #include "Exemplar.h"
 #include "Leitor.h"
 
+class Leitor;
+
 class ExemplarLivro: public Exemplar {
 
 private:

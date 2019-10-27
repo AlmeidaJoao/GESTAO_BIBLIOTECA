@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Gestao_Biblioteca">
-				<Option output="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Gestao_Biblioteca" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option output="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Gestao_Biblioteca" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Gestao_Biblioteca/fast">
-				<Option output="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Gestao_Biblioteca" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option output="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Gestao_Biblioteca" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,81 +67,81 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Autor.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Autor.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/CD.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/CD.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/DVD.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/DVD.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Documento.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Documento.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Leitor.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Leitor.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Livro.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Livro.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Revista.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/Revista.h">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/main.cpp">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/main.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="/home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/CMakeLists.txt">
+		<Unit filename="/mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

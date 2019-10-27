@@ -1,4 +1,4 @@
-/snap/clion/85/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA
+/snap/clion/88/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/nozotrox/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug
+-- Build files have been written to: /mnt/hgfs/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug

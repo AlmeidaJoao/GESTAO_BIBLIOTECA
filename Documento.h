@@ -1,13 +1,11 @@
 //
 // Created by nozotrox on 10/4/19.
 //
-#import <iostream>
-#import <string>
 #include "Exemplar.h"
 #include "Leitor.h"
 
 #ifndef GESTAO_BIBLIOTECA_DOCUMENTO_H
-#define GESTAO_BIBLIOTECA_DOCUMENTO_H
+#define  GESTAO_BIBLIOTECA_DOCUMENTO_H
 
 using namespace std;
 
@@ -15,32 +13,31 @@ class Documento {
 protected:
     string titulo;
     string assunto;
-    int cota;
+    int cota; //::>> Numero de exemplares que o documento possui
     string editora;
-    Exemplar* exemplares;
+    Exemplar* exemplares; //::>> lista que armazena todos os exemplares do documento
     int ano;
-    Leitor* dominio; //::>> quem esta sob o dominio do livro
+
 
 public:
-    Documento();
+    Documento(string titulo, string assunto, string editora, int ano, int cota);
     Documento(const Documento &doc);
     ~Documento();
     string getTitulo();
     string getAssunto();
-    int getCota();
+    int getCota(); //::>> Retorna o numero de expemplares que o documento possui
     string getEditora();
-    Exemplar* getExemplar();
+    Exemplar* getExemplares();
     int getAno();
-    Leitor* getLeitor();
     void setTitulo(string titulo);
     void setAssunto(string assuto);
     void setCota(int cota);
     void setEditora(string editora);
-    void setExemplar(Exemplar* exemplar[]);
+    void setExemplares(Exemplar* exemplar);
     void setAno(int ano);
-    void setDominio(Leitor* dominio[]);
+    void criarExemplar(int cota);
+    void toString();
 
 };
 
-
-#endif //GESTAO_BIBLIOTECA_DOCUMENTO_H
+#endif

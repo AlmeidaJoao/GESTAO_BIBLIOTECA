@@ -8,9 +8,11 @@
 #define GESTAO_BIBLIOTECA_LEITOR_H
 
 #include "ExemplarLivro.h"
-#include "Documento.h"
+
 
 using namespace std;
+
+class ExemplarLivro;
 
 class Leitor {
 
@@ -27,7 +29,7 @@ private:
 public:
     Leitor();
     Leitor(const Leitor &leitor);
-    ~Leirtor();
+    ~Leitor();
     string getNome();
     int getNumeroLeitor();
     string getCategoria();
