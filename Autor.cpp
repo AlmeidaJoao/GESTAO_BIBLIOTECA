@@ -44,3 +44,31 @@ void Autor::adicionarDocumentos(Documento *documento) {
     }
     size++;
 }
+
+void Autor::removerDocumento(Documento *documento) {
+
+    //:: Pegar o codigo do documento
+    int codigo = documento->getCodigo();
+    EntradaDoc* entradaDoc = rootDocumentos;
+    EntradaDoc* prevDoc = NULL;
+    for(int i = 0; i < size; i++){
+        if(entradaDoc->documento->getCodigo() == codigo) break;
+        prevDoc = entradaDoc;
+        entradaDoc = entradaDoc->proximoDocumento;
+    }
+
+    if(prevDoc == NULL){
+        //::>> Primeiro na lista
+        rootDocumentos = entradaDoc->proximoDocumento;
+    } else {
+        //::>> No meio ou fim da lista
+        prevDoc = entradaDoc->proximoDocumento;
+    }
+    delete(entradaDoc->documento);
+    delete(entradaDoc);
+    size--;
+}
+
+void Autor::toString() {
+    printf("%-20s %-20d\n", nome.c_str(), size);
+}

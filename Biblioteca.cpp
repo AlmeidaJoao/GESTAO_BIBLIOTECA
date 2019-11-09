@@ -36,6 +36,33 @@ bool Biblioteca::isFull() {
 
 
 //===================================== METODOS COM PROMPT ====================================
+void Biblioteca::removerDocumento() {
+    string titulo;
+    int opcao;
+    cout << "=================================================" << endl;
+    imprimirTodosDocumentos();
+    cout << "=================================================" << endl;
+    cout << endl << endl;
+    cout << "Titulo documento: ";
+    getline(cin, titulo);
+    Documento* documento = findDocumento(titulo);
+    if(documento != NULL){
+        cout << "=======================\n";
+        documento->toString();
+        cout << "\n=======================\n";
+        cout << "Remover? (1.sim, 0.nao): ";
+        cin >> opcao;
+        if(opcao == 1){
+            int hashCode = this->hash(documento->getTitulo());
+            removerDocumento(hashCode, documento->getCodigo());
+        }
+    } else {
+        cout << ":::: DOCUMENTO NAO EXISTENTE :::::";
+    }
+
+
+}
+
 void Biblioteca::adicionarLivro() {
     string titulo, assunto, editora, ISBN, nome_autor;
     int ano, cota,  nPaginas;
@@ -79,7 +106,9 @@ void Biblioteca::adicionarLivro() {
     //Reacionar o autor ao livro
     autor->adicionarDocumentos(livro);
 
+
     cout << "Livro Inserido!" << endl;
+
 }
 
 void Biblioteca::emprestarLivro() {
@@ -176,6 +205,116 @@ void Biblioteca::receberLivro(Leitor *leitor) {
 }
 
 //============================= METODOS DE ACESSO DIRECTO DIRECA ==============================
+void Biblioteca::removerDocumento(int hash, int codigo) {
+
+    //::>> Verificar se tem um livro atras e em frente
+    EntradaDoc* entradaDoc = documentos[hash];
+    EntradaDoc* prevDoc = NULL; // O Documento que esta antes do documento a remover
+    while(entradaDoc != NULL && entradaDoc->documento->getCodigo() != codigo){
+        prevDoc = entradaDoc;
+        entradaDoc = entradaDoc->proximoDocumento;
+    }
+    Documento* doc = entradaDoc->documento;
+
+    if(prevDoc != NULL){
+        //::>> Nao e um root da lista de colisao
+        prevDoc->proximoDocumento = entradaDoc->proximoDocumento;
+    } else {
+        //::>> E um root da tabela de disperao
+        documentos[hash] = entradaDoc->proximoDocumento;
+    }
+
+    if(doc->getTipo() == "Livro"){
+        Livro* livro = static_cast<Livro*>(doc);
+        Autor* autor = livro->getAutor();
+        autor->removerDocumento(doc);
+        if(autor->getSize() == 0){
+            //remover autor;
+            removerAutor(autor);
+        }
+    }
+    delete(entradaDoc->documento);
+    delete(entradaDoc);
+
+    cout << "\n:::::: DOCUMENTO REMOVIDO ::::::\n" << endl;
+}
+
+
+void Biblioteca::removerAutor(Autor *autor) {
+    char key = autor->getNome()[0];
+    char hash = toupper(key) - toupper('a');
+
+    EntradaAutor* entradaAutor = autores[hash];
+    EntradaAutor* prevAut = NULL; // O Documento que esta antes do documento a remover
+    while(entradaAutor != NULL && entradaAutor->autor->getNome() != autor->getNome()){
+        prevAut = entradaAutor;
+        entradaAutor = entradaAutor->proximoAutor;
+    }
+
+    if(prevAut != NULL){
+        //::>> Nao e um root da lista de colisao
+        prevAut->proximoAutor = entradaAutor->proximoAutor;
+    } else {
+        //::>> E um root da tabela de disperao
+        autores[hash] = entradaAutor->proximoAutor;
+    }
+
+    cout << entradaAutor->autor->getNome() << endl;
+    cout << ":::::: AUTOR REMOVIDO ::::::\n" << endl;
+    delete(entradaAutor->autor);
+    delete(entradaAutor);
+
+
+}
+void Biblioteca::executarImpressoes() {
+    int opcao;
+    string options[] = {"Imprimir todos autores", "Imprimir todos documentos"};
+    for(int i = 0; i < 2; i++){
+        printf("%2d.%s\n", (i+1), options[i].c_str());
+    }
+    cout << "Escolha a opcao: ";
+    cin >> opcao;
+    cin.ignore();
+
+    if(opcao == 1){
+        cout << "=================================================" << endl;
+        imprimirTodosAutores();
+        cout << "=================================================" << endl;
+    } else if (opcao == 2){
+        cout << "=================================================" << endl;
+        imprimirTodosDocumentos();
+        cout << "=================================================" << endl;
+    } else {
+        cout << "=================================================" << endl;
+        cout << "Opcao invalida!!!";
+        cout << "=================================================" << endl;
+    }
+}
+
+void Biblioteca::imprimirTodosDocumentos() {
+    printf("%-20s %-25s %-25s %-15s %10s\n", "Codigo", "Titulo", "Editora", "Exemplares", "Tipo");
+    for(int i = 0; i < MAX_CAPACITY; i++){
+        EntradaDoc* entradaDoc = documentos[i];
+        while(entradaDoc != NULL){
+            entradaDoc->documento->toString();
+            entradaDoc = entradaDoc->proximoDocumento;
+        }
+    }
+
+}
+
+
+void Biblioteca::imprimirTodosAutores() {
+    printf("\n%-20s %-20s\n", "Nome", "N. Documentos");
+    for(int i = 0; i < MAX_CAPACITY; i++){
+        EntradaAutor* entradaAutor = autores[i];
+        while(entradaAutor != NULL){
+            entradaAutor->autor->toString();
+            entradaAutor = entradaAutor->proximoAutor;
+        }
+    }
+
+}
 
 void Biblioteca::guardarLivro(ExemplarLivro *exemplarLivro) {
     Livro* livro = static_cast<Livro* >(exemplarLivro->getDocumento());
@@ -209,7 +348,9 @@ void Biblioteca::inserirDocumento(Documento *doc) {
 
     string titulo = doc->getTitulo();
     int hashCode = hash(titulo);
-    inserirDocumento(doc, hashCode);
+    EntradaDoc* newDoc = new EntradaDoc();
+    newDoc->documento = doc;
+    inserirDocumento(newDoc, hashCode);
     //::>> Inserir o documento como hashCode
     //::>> Este metodo adiciona automacitamente ao catalogo de todos os rootDocumentos da biblioteca
 }
@@ -241,33 +382,25 @@ void Biblioteca::inserirLivro(Livro *doc) {
 
     string titulo = doc->getTitulo();
     int hashCode = hash(titulo);
-
     EntradaDoc *newDoc = new EntradaDoc();
     newDoc->documento = doc;
-    if(documentos[hashCode] != NULL){
-        //::>> O novo livro e sempre adicionado em frente a lista de colisao
-        newDoc->proximoDocumento = documentos[hashCode];
-    }
 
-    *(livros + hashCode) = newDoc;
-    inserirDocumento(doc, hashCode); //::>> Prosseguir para a insercao no catalogo de rootDocumentos
+    livros[hashCode] = newDoc; //::>> Inserir no catalogo de livros
+    inserirDocumento(newDoc, hashCode); //::>> Prosseguir com a insercao no catologo de
+
+
 }
 
-void Biblioteca::inserirDocumento(Documento *doc, int hashCode) {
+void Biblioteca::inserirDocumento(EntradaDoc *newDoc, int hashCode) {
 
-    EntradaDoc *newDoc = new EntradaDoc();
-    newDoc->documento = doc;
+
     if(documentos[hashCode] != NULL){
         //::>> O novo documento e sempre adicionado em frente a lista de colisao
         newDoc->proximoDocumento = documentos[hashCode];
     }
     //::>> Nao existia algum elemento na tabela de dispersao
-    *(documentos + hashCode) = newDoc;
-    *(documentos + hashCode) = newDoc;
-
-    if(typeid(doc) ==  typeid(Livro)){
-        *(livros + hashCode) = newDoc;
-    }
+    documentos[hashCode] = newDoc;
+    size++;
 }
 
 void Biblioteca::inserirAutor(Autor *autor) {

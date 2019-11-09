@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <algorithm>
+#include <time.h>
 
 #include "Livro.h"
 #include "Biblioteca.h"
@@ -36,7 +37,7 @@ int main() {
 
 void inserirDadosPreliminares(){
 
-    Documento* doc2 = new Documento("Jealousy","magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis","Gorczany, Larkin and Weber",2006,10);
+    Livro* doc2 = new Livro("Jealousy","magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis","Gorczany, Larkin and Weber",2006,10,"039209482A", 20);
     Livro* doc = new Livro("Hunter Prey","metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum","Torphy and Sons",1988,10, "039209482A", 20);
     Livro* doc1 = new Livro("19th Wife"," The facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla","Corwin Inc",2005,10, "039209482A", 20);
     Livro* doc3 = new Livro("Silent Witness (Do Not Disturb)","pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna","Littel LLC",1992,10, "039209482A", 20);
@@ -50,17 +51,19 @@ void inserirDadosPreliminares(){
     string name1 = typeid(doc).name();
     string name2 = typeid(doc).name();
 
-    doc2->toString();
-
     doc->setAutor(autor);
     doc1->setAutor(autor);
-//    doc2->setAutor(autor2);
+    doc2->setAutor(autor2);
     doc3->setAutor(autor3);
     doc4->setAutor(autor3);
     doc5->setAutor(autor3);
 
-//    bib->inserirLivro(doc2);
     bib->inserirAutor(autor);
+    bib->inserirAutor(autor2);
+    bib->inserirAutor(autor3);
+
+
+    bib->inserirLivro(doc2);
     bib->inserirLivro(doc);
     bib->inserirLivro(doc1);
     bib->inserirLivro(doc3);
@@ -90,7 +93,9 @@ void imprimirMenu(){
     printf("====================%s==================\n", "MENU");
     printf("1.%s", "Adicionar Livro\n");
     printf("2.%s", "Levar Emprestado Livro\n");
-    printf("3.%s", "Devolver Livro");
+    printf("3.%s", "Devolver Livro\n");
+    printf("4.%s", "Remover Documento\n");
+    printf("5.%s", "Fazer impressoes");
     printf("\n====================%s==================\n", "/\\");
 }
 
@@ -100,6 +105,8 @@ void usarOpcao(int i){
         case 1: bib->adicionarLivro();break;
         case 2: bib->emprestarLivro();break;
         case 3: bib->receberLivro(); break;
+        case 4: bib->removerDocumento();break;
+        case 5: bib->executarImpressoes(); break;
         default: printf("#OPCAO NAO VALIDA");
     }
 

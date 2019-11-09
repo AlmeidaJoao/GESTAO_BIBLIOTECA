@@ -3,7 +3,7 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctime>
+#include <time.h>
 #include "Documento.h"
 #include "ExemplarLivro.h"
 
@@ -11,12 +11,18 @@
 #define MAX_COTA_LIVRO 10
 #define MAX_COTA_DOCUMENTO 1
 
+int Documento::ultimoCodigo = 2001;
 
 Documento::Documento() {
     this->titulo = "#";
+    this->codigo = 0;
 }
 //Contrutor base do documetno
 Documento::Documento(string titulo, string assunto, string editora, int ano, int cota) {
+    // Gerar um codigo unico
+    // inicializacao do numero random. E so feita uma
+
+    this->codigo = ultimoCodigo++;
     this->titulo = titulo;
     this->assunto = assunto;
     this->editora = editora;
@@ -28,12 +34,10 @@ Documento::Documento(string titulo, string assunto, string editora, int ano, int
 
 //Copy constructor para evictar com que os dados do objecto sejam perdidos quando mudarem de escopo
 Documento::Documento(const Documento &doc) {
+    this->codigo = doc.codigo;
     this->titulo = doc.titulo;
     this->assunto = doc.assunto;
     this->editora = doc.editora;
-//    for(int i = 0; i < doc.cota; i++){
-//        this->exemplares[i] = doc.exemplares[i];
-//    }
     this->ano = doc.ano;
     this->cota = doc.cota;
 
@@ -42,9 +46,16 @@ Documento::Documento(const Documento &doc) {
 //================ GETTERS ==============================
 Documento::~Documento() {}
 
+int Documento::getCodigo() {
+    return codigo;
+}
 
 string Documento::getTitulo() {
     return  titulo;
+}
+
+string Documento::getTipo() {
+    return tipo;
 }
 
 string Documento::getAssunto() {
@@ -91,6 +102,15 @@ void Documento::setEditora(string editora) {
 
 
 //================= HELPERS ======================================
+int Documento::getQtdExemp() {
+    int qtd = 0;
+    for(int i = 0; i < MAX_CAPACITY_EXEMPLAR; i++){
+        Exemplar* ex = exemplares[i];
+        if(ex) qtd++;
+    }
+    return qtd;
+}
+
 //Metodo para criar exemplares automaticamente partindo da cota passada
 void Documento::criarExemplar(int cota) {
 
@@ -118,8 +138,18 @@ void Documento::criarExemplar(int cota) {
     }
 }
 
+
 void Documento::toString(){
-    printf("%-65s %-115s %-50s %-10d %-10d \n", titulo.c_str(), assunto.c_str(), editora.c_str(), ano, cota);
+    string tit = titulo;
+    string edit = editora;
+    if(titulo.length() >= 20){
+        tit = titulo.substr(0, 17) + "...";
+    }
+
+    if(editora.length() >= 20){
+        edit = editora.substr(0, 17) + "...";
+    }
+    printf("%-20d %-25s %-25s %-15d %10s\n", getCodigo(), tit.c_str(), edit.c_str(), getQtdExemp(), getTipo().c_str());
 }
 //===========================================
 

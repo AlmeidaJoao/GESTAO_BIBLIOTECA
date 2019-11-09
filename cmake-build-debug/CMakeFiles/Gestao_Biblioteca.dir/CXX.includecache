@@ -10,6 +10,14 @@ C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algori
 Encapsuladores/EntradaDoc.h
 C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.h
 
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.cpp
+algorithm
+-
+iostream
+-
+Biblioteca.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h
+
 C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h
 Livro.h
 C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h
@@ -57,16 +65,4 @@ Documento.h
 C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 Autor.h
 C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h
-
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/main.cpp
-iostream
--
-stdio.h
--
-algorithm
--
-Livro.h
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h
-Biblioteca.h
-C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h
 

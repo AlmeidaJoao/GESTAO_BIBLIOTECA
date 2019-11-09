@@ -24,6 +24,7 @@ class Autor {
         int getSize();
         void setDocumentos(Documento* documentos); //::>> Definir uma lista de rootDocumentos feito pelo autor
         void adicionarDocumentos(Documento* documento); //::> Adidionar documento a lista de documento do autor
+        void removerDocumento(Documento* documento);
         void toString(); // ::>> Imprimir dados do autor
 
 };

@@ -17,6 +17,7 @@ Livro::Livro(string titulo, string assunto, string editora, int ano, int cota, s
     this->nLeitoresEpera = 0;
     this->leitores = new FilaLeitor();
     this->exemplarDisp = 2;
+    this->tipo = "Livro";
 }
 
 Livro::Livro(const Livro &livro) : Documento(livro) {
@@ -131,6 +132,7 @@ void Livro::setISBN(string isbn) {
 
 void Livro::setAutor(Autor *autor) {
     this->autor = autor;
+    autor->adicionarDocumentos(this);
 }
 
 void Livro::setDominioEmprestimo(Leitor *dominioEmprestimo) {
