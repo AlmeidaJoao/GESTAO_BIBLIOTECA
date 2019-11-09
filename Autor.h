@@ -1,28 +1,30 @@
 //
-// Created by nozotrox on 10/4/19.
+// Created by Feliciano Jr. Mazoio on 11/5/2019.
 //
-#include <string>
-#include "Documento.h"
 
 #ifndef GESTAO_BIBLIOTECA_AUTOR_H
 #define GESTAO_BIBLIOTECA_AUTOR_H
 
+#include "Encapsuladores/EntradaDoc.h"
 
-using namespace std;
-
+class EntradaDoc;
 class Autor {
-private:
-    string nome;
-    Documento* documentos;
+    private:
+        int size; //::>> Numero de livro que o autor possui
+        string nome; //::>> Nome do autor
+        EntradaDoc* rootDocumentos;//::>> Estrutura que vai permitir uma lista ligada de rootDocumentos elaborados pelo autor
 
-public :
-    Autor();
-    Autor(const Autor &autor);
-    ~Autor();
-    string getNome();
-    Documento* getDocumentos();
-    void setNome(string nome);
-    void setDocumentos(Documento* documentos);
+    public :
+        Autor(string nome);
+        Autor(const Autor &autor); //::>> Construtor elaborado para evitar perda de dados
+        ~Autor();
+        string getNome();
+        EntradaDoc* getDocumentos();
+        void setNome(string nome);
+        int getSize();
+        void setDocumentos(Documento* documentos); //::>> Definir uma lista de rootDocumentos feito pelo autor
+        void adicionarDocumentos(Documento* documento); //::> Adidionar documento a lista de documento do autor
+        void toString(); // ::>> Imprimir dados do autor
 
 };
 

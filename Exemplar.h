@@ -1,18 +1,16 @@
 //
 // Created by nozotrox on 10/4/19.
 //
-#include <iostream>
-#include <string>
-
-
-
 #ifndef GESTAO_BIBLIOTECA_EXEMPLAR_H
 #define GESTAO_BIBLIOTECA_EXEMPLAR_H
 
 
+#include "Documento.h"
+
 using namespace std;
 
 class Documento;
+
 // Enum que simboliza o estado de conservacao de um exemplar
 enum Estado { BOM, MAU, MEDIO};
 

@@ -7,7 +7,7 @@
 
 
 #include "Exemplar.h"
-#include "Leitor.h"
+#include "Livro.h"
 
 class Leitor;
 
@@ -18,6 +18,7 @@ private:
 
 public:
     ExemplarLivro();
+    ExemplarLivro(bool situacao, Estado estado, int codigo, Livro *livro);
     ExemplarLivro(const ExemplarLivro &exemplarLivro);
     ~ExemplarLivro();
     Leitor* getUltimoLeitor();

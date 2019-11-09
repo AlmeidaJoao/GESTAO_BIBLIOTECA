@@ -3,9 +3,18 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctime>
 #include "Documento.h"
+#include "ExemplarLivro.h"
 
 
+#define MAX_COTA_LIVRO 10
+#define MAX_COTA_DOCUMENTO 1
+
+
+Documento::Documento() {
+    this->titulo = "#";
+}
 //Contrutor base do documetno
 Documento::Documento(string titulo, string assunto, string editora, int ano, int cota) {
     this->titulo = titulo;
@@ -22,6 +31,9 @@ Documento::Documento(const Documento &doc) {
     this->titulo = doc.titulo;
     this->assunto = doc.assunto;
     this->editora = doc.editora;
+//    for(int i = 0; i < doc.cota; i++){
+//        this->exemplares[i] = doc.exemplares[i];
+//    }
     this->ano = doc.ano;
     this->cota = doc.cota;
 
@@ -52,7 +64,7 @@ int Documento::getCota(){
 }
 
 Exemplar* Documento::getExemplares() {
-    return exemplares;
+    return *exemplares;
 }
 //==============================================
 
@@ -70,9 +82,6 @@ void Documento::setCota(int cota) {
     this->cota = cota;
 }
 
-void Documento::setExemplares(Exemplar *exemplar) {
-    this->exemplares = exemplar;
-}
 
 void Documento::setEditora(string editora) {
     this->editora = editora;
@@ -86,17 +95,27 @@ void Documento::setEditora(string editora) {
 void Documento::criarExemplar(int cota) {
 
     srand(time(NULL)); // inicializacao do numero random. E so feita uma vez
-    Exemplar* exemplares[cota]; //lista de todos exemplares do cocumetno
-    int codigoLivro; //codigo random para o exemplar
+    int codigoDocumento; //codigo random para o exemplar
 
-    for(int i = 0; i < cota; i++){
-        codigoLivro = rand() % 1000 + 2000;
-        Exemplar* exemplar = new Exemplar(false, BOM , codigoLivro , this);
-        exemplares[i] = exemplar;
+    if(cota == MAX_COTA_LIVRO){
+        //::>> Criacao de exemplares de livro
+        for(int i = 0; i < 3; i++){
+            codigoDocumento = rand() % 1000 + 2000;
+            //::>> Fazer dowcast para livro como o construtor faz o uso de livro
+            ExemplarLivro* exemplar = new ExemplarLivro(false, BOM , codigoDocumento , static_cast<Livro *>(this));
+            exemplares[i] = exemplar;
+        }
+
+
+    } else {
+        //::>> Criacao de exemplares de outros rootDocumentos
+        for(int i = 0; i < cota; i++){
+            codigoDocumento = rand() % 1000 + 2000;
+            Exemplar* exemplar = new Exemplar(false, BOM , codigoDocumento , this);
+            exemplares[i] = exemplar;
+        }
+
     }
-
-    // Armazenar a lista de exemplars no documento
-    this->exemplares = *exemplares;
 }
 
 void Documento::toString(){
