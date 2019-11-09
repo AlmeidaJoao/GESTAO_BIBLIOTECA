@@ -71,9 +71,12 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj: ../Exempl
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj: ../Leitor.h
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj: ../Livro.h
 
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../Autor.h
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../Documento.h
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../Encapsuladores/EntradaDoc.h
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../EstruturasDados/FilaDocumento.cpp
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../EstruturasDados/FilaDocumento.h
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../Livro.h
 
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj: ../Autor.h
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj: ../Documento.h

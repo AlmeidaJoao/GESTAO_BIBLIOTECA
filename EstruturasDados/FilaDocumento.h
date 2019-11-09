@@ -12,6 +12,7 @@
 class FilaDocumento {
 private:
     int size;
+    int criterio;
     Documento* fila[MAX_CAPACITY_DOCUMENTO] = {0};
 
 
@@ -22,6 +23,8 @@ public:
     bool isFull();
     void inserirDocumento(Documento* doc); // Metodo de insercao que adiciona o documento por titulo
     void inserirDocumento(Documento* doc, int criterio); // Adiciona o documento por criterio | 2. titulo, 1. Tema|Assunto, Default: titulo
+    void percolarBaixo(int pos);
+    Documento* removerMinimo();
     void toString();
 };
 

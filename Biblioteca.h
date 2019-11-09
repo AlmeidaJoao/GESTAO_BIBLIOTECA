@@ -56,7 +56,7 @@ public:
     void guardarLivro(ExemplarLivro* exemplarLivro); //::>> Armazena na biblioteca o livro emprestado
     void imprimirTodosAutores();
     void imprimirTodosDocumentos();
-    void imprimirTodosDocumentosEmOrdem(int option);
+    void imprimirTodosLivrosEmOrdem(int option);
     void removerDocumento(int hash, int codigo);
     void removerAutor(Autor* autor); // Remove o autor
 

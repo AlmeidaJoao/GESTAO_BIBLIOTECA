@@ -52,6 +52,7 @@ void Biblioteca::pesquisarAutor() {
     autor->toString();
     cout << " ::: DOCUMENTOS DO AUTOR :::\n";
     if(autor->getSize() > 0){
+        printf("%-20s %-25s %-25s %-15s %10s\n", "Codigo", "Titulo", "Editora", "Exemplares", "Tipo");
         autor->getOrderedDocuments()->toString();
     } else {
         cout << "Autor nao possui algum documento!";
@@ -356,7 +357,7 @@ void Biblioteca::executarImpressoes() {
         cout << "\n Listar por ordem de:\n1.Tema ou Assunto\n2.Titulo\nOpcao: ";
         cin >> opcao;
         cin.ignore();
-        imprimirTodosDocumentosEmOrdem(opcao);
+        imprimirTodosLivrosEmOrdem(opcao);
 
     } else {
         cout << "=================================================" << endl;
@@ -377,16 +378,17 @@ void Biblioteca::imprimirTodosDocumentos() {
 
 }
 
-void Biblioteca::imprimirTodosDocumentosEmOrdem(int option) {
+void Biblioteca::imprimirTodosLivrosEmOrdem(int option) {
 
     FilaDocumento* filaDocumento = new FilaDocumento();
-    for(int i = 0; i < bookSize; i++){
+    for(int i = 0; i < MAX_CAPACITY; i++){
         EntradaDoc* entradaDoc = livros[i];
         while(entradaDoc != NULL){
             filaDocumento->inserirDocumento(entradaDoc->documento, option);
             entradaDoc = entradaDoc->proximoDocumento;
         }
     }
+    filaDocumento->toString();
 }
 
 void Biblioteca::imprimirTodosAutores() {
