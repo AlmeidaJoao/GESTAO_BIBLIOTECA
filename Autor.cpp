@@ -3,6 +3,7 @@
 //
 
 #include "Autor.h"
+#include "EstruturasDados/FilaDocumento.h"
 
 Autor::Autor(string nome) {
     this->nome = nome;
@@ -29,6 +30,17 @@ int Autor::getSize() {
 
 EntradaDoc* Autor::getDocumentos() {
     return this->rootDocumentos;
+}
+
+FilaDocumento* Autor::getOrderedDocuments() {
+    static FilaDocumento* filaDocumento = new FilaDocumento();
+    EntradaDoc* entradaDoc = rootDocumentos;
+    while (entradaDoc != NULL){
+        // Adicionar os documentos ao heap que ordenara na insercao
+        filaDocumento->inserirDocumento(entradaDoc->documento);
+        entradaDoc = entradaDoc->proximoDocumento;
+    }
+    return filaDocumento;
 }
 
 void Autor::adicionarDocumentos(Documento *documento) {

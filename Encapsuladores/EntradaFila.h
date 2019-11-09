@@ -16,9 +16,6 @@ public:
     EntradaFila();
     EntradaFila(const EntradaFila &entradaFila);
     ~EntradaFila();
-
-
-
 };
 
 

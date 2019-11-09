@@ -6,9 +6,11 @@
 #include <algorithm>
 #include <iostream>
 #include "Biblioteca.h"
+#include "EstruturasDados/FilaDocumento.h"
 
 Biblioteca::Biblioteca() {
     size = 0;
+    bookSize = 0;
     catalogoLivros = NULL;
 }
 
@@ -36,6 +38,66 @@ bool Biblioteca::isFull() {
 
 
 //===================================== METODOS COM PROMPT ====================================
+void Biblioteca::pesquisarAutor() {
+    cout << endl;
+    string nomeAutor;
+    cout << "Nome do autor: ";
+    getline(cin, nomeAutor);
+    Autor* autor = findAutor(nomeAutor);
+    if(autor == NULL){
+        cout << "::: AUTOR NAO ENCONTRADO :::";
+        return;
+    }
+    printf("\n%-20s %-20s\n", "Nome", "N. Documentos");
+    autor->toString();
+    cout << " ::: DOCUMENTOS DO AUTOR :::\n";
+    if(autor->getSize() > 0){
+        autor->getOrderedDocuments()->toString();
+    } else {
+        cout << "Autor nao possui algum documento!";
+    }
+}
+
+void Biblioteca::pesquisarDocumento() {
+    cout << endl;
+    int opcao;
+    string options[] = {"Pesquisar por codigo", "Pesquisar por titulo"};
+    for(int i = 0; i < 2; i++){
+        printf("%2d.%s\n", (i+1), options[i].c_str());
+    }
+    cout << "Escolha a opcao: ";
+    cin >> opcao;
+    cin.ignore();
+    Documento* doc = NULL;
+    if(opcao == 1){
+        // realizar a pesquisa por codigo
+        int codigo;
+        cout << "\nCodigo do documento: ";
+        cin >> codigo;
+        cin.ignore();
+        doc = findDocumento(codigo);
+
+    } else if (opcao == 2){
+        // realizar a pesquisa por titulo
+        string titulo;
+        cout << "\nTitulo do documento: ";
+        getline(cin, titulo);
+        doc = findDocumento(titulo);
+
+    } else {
+        cout << "::: OPCAO INVALIDA ::";
+        return;
+    }
+
+    if(doc == NULL){
+        cout << "\n :::: DOCUMENTO NAO ENCONTRADO :::\n";
+    } else {
+        cout << "=================================================" << endl;
+        doc->toString();
+        cout << "=================================================" << endl;
+    }
+}
+
 void Biblioteca::removerDocumento() {
     string titulo;
     int opcao;
@@ -135,7 +197,11 @@ void Biblioteca::emprestarLivro() {
     }
     cout << "Titulo: ";
     getline(cin, tituloLivro);
-    Livro* livro = findDocumento(tituloLivro);
+    Documento* doc = findDocumento(tituloLivro);
+    Livro* livro = NULL;
+    if(doc->getTipo() == "Livro"){
+        livro = static_cast<Livro*>(doc);
+    }
     // Caso tenha encontrado o livro
     if(livro != NULL){
         // imprimir dados do livro
@@ -225,6 +291,7 @@ void Biblioteca::removerDocumento(int hash, int codigo) {
     }
 
     if(doc->getTipo() == "Livro"){
+        bookSize--; //::>> Reduzir o controlador da quantidade de livros
         Livro* livro = static_cast<Livro*>(doc);
         Autor* autor = livro->getAutor();
         autor->removerDocumento(doc);
@@ -266,10 +333,11 @@ void Biblioteca::removerAutor(Autor *autor) {
 
 
 }
+
 void Biblioteca::executarImpressoes() {
     int opcao;
-    string options[] = {"Imprimir todos autores", "Imprimir todos documentos"};
-    for(int i = 0; i < 2; i++){
+    string options[] = {"Imprimir todos autores", "Imprimir todos documentos", "Listar Livros em Ordem"};
+    for(int i = 0; i < 3; i++){
         printf("%2d.%s\n", (i+1), options[i].c_str());
     }
     cout << "Escolha a opcao: ";
@@ -284,6 +352,12 @@ void Biblioteca::executarImpressoes() {
         cout << "=================================================" << endl;
         imprimirTodosDocumentos();
         cout << "=================================================" << endl;
+    } else if (opcao == 3){
+        cout << "\n Listar por ordem de:\n1.Tema ou Assunto\n2.Titulo\nOpcao: ";
+        cin >> opcao;
+        cin.ignore();
+        imprimirTodosDocumentosEmOrdem(opcao);
+
     } else {
         cout << "=================================================" << endl;
         cout << "Opcao invalida!!!";
@@ -303,6 +377,17 @@ void Biblioteca::imprimirTodosDocumentos() {
 
 }
 
+void Biblioteca::imprimirTodosDocumentosEmOrdem(int option) {
+
+    FilaDocumento* filaDocumento = new FilaDocumento();
+    for(int i = 0; i < bookSize; i++){
+        EntradaDoc* entradaDoc = livros[i];
+        while(entradaDoc != NULL){
+            filaDocumento->inserirDocumento(entradaDoc->documento, option);
+            entradaDoc = entradaDoc->proximoDocumento;
+        }
+    }
+}
 
 void Biblioteca::imprimirTodosAutores() {
     printf("\n%-20s %-20s\n", "Nome", "N. Documentos");
@@ -387,8 +472,7 @@ void Biblioteca::inserirLivro(Livro *doc) {
 
     livros[hashCode] = newDoc; //::>> Inserir no catalogo de livros
     inserirDocumento(newDoc, hashCode); //::>> Prosseguir com a insercao no catologo de
-
-
+    bookSize++;
 }
 
 void Biblioteca::inserirDocumento(EntradaDoc *newDoc, int hashCode) {
@@ -457,8 +541,21 @@ Leitor* Biblioteca::findLeitor(string nome) {
     return NULL;
 }
 
+Documento* Biblioteca::findDocumento(int codigo) {
+    for(int i = 0; i < MAX_CAPACITY; i++){
+        EntradaDoc* entradaDoc = documentos[i];
+        while(entradaDoc != NULL){
+            if(entradaDoc->documento->getCodigo() == codigo){
+                return entradaDoc->documento;
+            }
+            entradaDoc = entradaDoc->proximoDocumento;
+        }
+    }
 
-Livro* Biblioteca::findDocumento(string titulo){
+    return NULL;
+}
+
+Documento* Biblioteca::findDocumento(string titulo){
 
     int hashCode = hash(titulo);
     EntradaDoc *entradaDoc = documentos[hashCode];
@@ -470,7 +567,7 @@ Livro* Biblioteca::findDocumento(string titulo){
         entradaDoc = entradaDoc->proximoDocumento;
     }
 
-    return static_cast<Livro *>(entradaDoc->documento);
+    return entradaDoc->documento;
 }
 
 

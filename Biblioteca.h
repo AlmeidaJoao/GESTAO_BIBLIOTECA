@@ -23,7 +23,8 @@ private:
     EntradaAutor* autores[MAX_CAPACITY] = {0}; //::>> catalogo de autores em tabela de dispersão | Esta inicializacao faz com que todos elementos do array sejam NULL
     EntradaLeitor* leitores[MAX_CAPACITY] = {0}; //::>> catalogo para leitores que usaram a biblioteca pelo menos uma vez | Esta inicializacao faz com que todos elementos do array sejam NULL
     Livro* catalogoLivros;
-    int size; //::>> Controla o numero de documentos que a biblioteca possui
+    int bookSize; //::>> Controla o tamanho dos livros que existem na biblioteca;
+    int size; //::>> Controla o numero de documentos que a biblioteca possui;
 
 
 
@@ -42,6 +43,9 @@ public:
     void receberLivro(Leitor* leitor); //::>> Devolve um dos livros que levou emprestado atraves de um prompt
     void executarImpressoes(); //::>> Imprime dados relacionado a um determinado objecto
     void removerDocumento(); //::>> Remove o documento partindo do codigo;
+    void pesquisarDocumento(); //::>> Pesquisa o documento com um prompt que vai permitir que possa escolher se pretende fazer por codigo ou titulo
+    void pesquisarAutor();
+
 
 
     void inserirDocumento(EntradaDoc* newDoc, int hashCode); //::>> Inserir um documento, qualquer que seja
@@ -52,11 +56,13 @@ public:
     void guardarLivro(ExemplarLivro* exemplarLivro); //::>> Armazena na biblioteca o livro emprestado
     void imprimirTodosAutores();
     void imprimirTodosDocumentos();
+    void imprimirTodosDocumentosEmOrdem(int option);
     void removerDocumento(int hash, int codigo);
     void removerAutor(Autor* autor); // Remove o autor
 
 
-    Livro* findDocumento(string titulo); //::>> Encontra o livro pretendito pelo titulo
+    Documento* findDocumento(int codigo); //::>>Encontra o documento atraves do codigo
+    Documento* findDocumento(string titulo); //::>> Encontra o livro pretendito pelo titulo
     Autor* findAutor(string nome); //::>> Encontrar o autor no catalogo a partir do nome
     Leitor* findLeitor(string nome); //::>> Encontrar o leitor no catalogo a partir do nome
     int hash(string str); //::>> Funcao de dispersao

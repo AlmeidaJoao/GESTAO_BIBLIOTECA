@@ -8,6 +8,8 @@
 #include "Encapsuladores/EntradaDoc.h"
 
 class EntradaDoc;
+class FilaDocumento;
+
 class Autor {
     private:
         int size; //::>> Numero de livro que o autor possui
@@ -20,12 +22,14 @@ class Autor {
         ~Autor();
         string getNome();
         EntradaDoc* getDocumentos();
+        FilaDocumento* getOrderedDocuments(); //::>> Retorna uma heap com todos os documentos do autor ordenados
         void setNome(string nome);
         int getSize();
         void setDocumentos(Documento* documentos); //::>> Definir uma lista de rootDocumentos feito pelo autor
         void adicionarDocumentos(Documento* documento); //::> Adidionar documento a lista de documento do autor
         void removerDocumento(Documento* documento);
         void toString(); // ::>> Imprimir dados do autor
+
 
 };
 

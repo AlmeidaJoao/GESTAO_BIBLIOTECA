@@ -39,7 +39,7 @@ void inserirDadosPreliminares(){
 
     Livro* doc2 = new Livro("Jealousy","magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis","Gorczany, Larkin and Weber",2006,10,"039209482A", 20);
     Livro* doc = new Livro("Hunter Prey","metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum","Torphy and Sons",1988,10, "039209482A", 20);
-    Livro* doc1 = new Livro("19th Wife"," The facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla","Corwin Inc",2005,10, "039209482A", 20);
+    Livro* doc1 = new Livro("The 19th Wife"," The facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla","Corwin Inc",2005,10, "039209482A", 20);
     Livro* doc3 = new Livro("Silent Witness (Do Not Disturb)","pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna","Littel LLC",1992,10, "039209482A", 20);
     Livro* doc4 = new Livro("Have Rocket, Will Travel","magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque","Cruickshank, Monahan and Crooks",2010,10, "039209482A", 20);
     Livro* doc5 = new Livro("Baadasssss! (How to Get the Man's Foot Outta Your Ass)","pellentesque quisque porta volutpat erat quisque erat eros viverra eget", "Hauck Inc",2012,10, "039209482A", 20);
@@ -94,8 +94,10 @@ void imprimirMenu(){
     printf("1.%s", "Adicionar Livro\n");
     printf("2.%s", "Levar Emprestado Livro\n");
     printf("3.%s", "Devolver Livro\n");
-    printf("4.%s", "Remover Documento\n");
-    printf("5.%s", "Fazer impressoes");
+    printf("4.%s", "Pesquisar Documento\n");
+    printf("5.%s", "Pesquisar Autor\n");
+    printf("6.%s", "Remover Documento\n");
+    printf("7.%s", "Fazer impressoes");
     printf("\n====================%s==================\n", "/\\");
 }
 
@@ -105,8 +107,10 @@ void usarOpcao(int i){
         case 1: bib->adicionarLivro();break;
         case 2: bib->emprestarLivro();break;
         case 3: bib->receberLivro(); break;
-        case 4: bib->removerDocumento();break;
-        case 5: bib->executarImpressoes(); break;
+        case 4: bib->pesquisarDocumento();break;
+        case 5: bib->pesquisarAutor(); break;
+        case 6: bib->removerDocumento();break;
+        case 7: bib->executarImpressoes(); break;
         default: printf("#OPCAO NAO VALIDA");
     }
 

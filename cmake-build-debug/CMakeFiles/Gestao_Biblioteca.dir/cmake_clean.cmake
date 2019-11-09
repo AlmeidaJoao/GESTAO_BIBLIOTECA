@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj"
   "CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj"
   "CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj"
   "CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj"

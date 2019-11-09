@@ -392,6 +392,33 @@ Encapsuladores/EntradaLeitor.cpp.s:
 	$(MAKE) -f CMakeFiles\Gestao_Biblioteca.dir\build.make CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.s
 .PHONY : Encapsuladores/EntradaLeitor.cpp.s
 
+EstruturasDados/FilaDocumento.obj: EstruturasDados/FilaDocumento.cpp.obj
+
+.PHONY : EstruturasDados/FilaDocumento.obj
+
+# target to build an object file
+EstruturasDados/FilaDocumento.cpp.obj:
+	$(MAKE) -f CMakeFiles\Gestao_Biblioteca.dir\build.make CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj
+.PHONY : EstruturasDados/FilaDocumento.cpp.obj
+
+EstruturasDados/FilaDocumento.i: EstruturasDados/FilaDocumento.cpp.i
+
+.PHONY : EstruturasDados/FilaDocumento.i
+
+# target to preprocess a source file
+EstruturasDados/FilaDocumento.cpp.i:
+	$(MAKE) -f CMakeFiles\Gestao_Biblioteca.dir\build.make CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.i
+.PHONY : EstruturasDados/FilaDocumento.cpp.i
+
+EstruturasDados/FilaDocumento.s: EstruturasDados/FilaDocumento.cpp.s
+
+.PHONY : EstruturasDados/FilaDocumento.s
+
+# target to generate assembly for a file
+EstruturasDados/FilaDocumento.cpp.s:
+	$(MAKE) -f CMakeFiles\Gestao_Biblioteca.dir\build.make CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.s
+.PHONY : EstruturasDados/FilaDocumento.cpp.s
+
 EstruturasDados/FilaLeitor.obj: EstruturasDados/FilaLeitor.cpp.obj
 
 .PHONY : EstruturasDados/FilaLeitor.obj
@@ -647,6 +674,9 @@ help:
 	@echo ... Encapsuladores/EntradaLeitor.obj
 	@echo ... Encapsuladores/EntradaLeitor.i
 	@echo ... Encapsuladores/EntradaLeitor.s
+	@echo ... EstruturasDados/FilaDocumento.obj
+	@echo ... EstruturasDados/FilaDocumento.i
+	@echo ... EstruturasDados/FilaDocumento.s
 	@echo ... EstruturasDados/FilaLeitor.obj
 	@echo ... EstruturasDados/FilaLeitor.i
 	@echo ... EstruturasDados/FilaLeitor.s

@@ -56,9 +56,22 @@ include CMakeFiles/Gestao_Biblioteca.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Gestao_Biblioteca.dir/flags.make
 
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj: ../EstruturasDados/FilaDocumento.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\EstruturasDados\FilaDocumento.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\EstruturasDados\FilaDocumento.cpp
+
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\EstruturasDados\FilaDocumento.cpp > CMakeFiles\Gestao_Biblioteca.dir\EstruturasDados\FilaDocumento.cpp.i
+
+CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\EstruturasDados\FilaDocumento.cpp -o CMakeFiles\Gestao_Biblioteca.dir\EstruturasDados\FilaDocumento.cpp.s
+
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj: ../Encapsuladores/EntradaExemplar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Encapsuladores\EntradaExemplar.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Encapsuladores\EntradaExemplar.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.i: cmake_force
@@ -71,7 +84,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.s: cmake_for
 
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj: ../EstruturasDados/PilhaExemplar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\EstruturasDados\PilhaExemplar.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\EstruturasDados\PilhaExemplar.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.i: cmake_force
@@ -84,7 +97,7 @@ CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.s: cmake_forc
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj: ../Encapsuladores/EntradaLeitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Encapsuladores\EntradaLeitor.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Encapsuladores\EntradaLeitor.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.i: cmake_force
@@ -97,7 +110,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj: ../EstruturasDados/FilaLeitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\EstruturasDados\FilaLeitor.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\EstruturasDados\FilaLeitor.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.i: cmake_force
@@ -110,7 +123,7 @@ CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaLeitor.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.obj: ../Autor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Autor.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Autor.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.i: cmake_force
@@ -123,7 +136,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.obj: ../Encapsuladores/EntradaFila.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Encapsuladores\EntradaFila.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Encapsuladores\EntradaFila.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.i: cmake_force
@@ -136,7 +149,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaFila.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.obj: ../Encapsuladores/EntradaAutor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Encapsuladores\EntradaAutor.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Encapsuladores\EntradaAutor.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.i: cmake_force
@@ -149,7 +162,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaAutor.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.obj: ../Encapsuladores/EntradaDoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Encapsuladores\EntradaDoc.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Encapsuladores\EntradaDoc.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.i: cmake_force
@@ -162,7 +175,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaDoc.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/main.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/main.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\main.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\main.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/main.cpp.i: cmake_force
@@ -175,7 +188,7 @@ CMakeFiles/Gestao_Biblioteca.dir/main.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Biblioteca.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Biblioteca.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Biblioteca.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.i: cmake_force
@@ -188,7 +201,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.obj: ../Documento.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Documento.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Documento.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.i: cmake_force
@@ -201,7 +214,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Documento.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.obj: ../Leitor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Leitor.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Leitor.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.i: cmake_force
@@ -214,7 +227,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Leitor.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.obj: ../Exemplar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Exemplar.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Exemplar.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.i: cmake_force
@@ -227,7 +240,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Exemplar.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.obj: ../Revista.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Revista.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Revista.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.i: cmake_force
@@ -240,7 +253,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Revista.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.obj: ../Livro.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\Livro.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\Livro.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.i: cmake_force
@@ -253,7 +266,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Livro.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.obj: ../ExemplarLivro.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\ExemplarLivro.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\ExemplarLivro.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.i: cmake_force
@@ -266,7 +279,7 @@ CMakeFiles/Gestao_Biblioteca.dir/ExemplarLivro.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj: ../CD.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\CD.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\CD.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.i: cmake_force
@@ -279,7 +292,7 @@ CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.s: cmake_force
 
 CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.obj: CMakeFiles/Gestao_Biblioteca.dir/flags.make
 CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.obj: ../DVD.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Gestao_Biblioteca.dir\DVD.cpp.obj -c C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\DVD.cpp
 
 CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.i: cmake_force
@@ -292,6 +305,7 @@ CMakeFiles/Gestao_Biblioteca.dir/DVD.cpp.s: cmake_force
 
 # Object files for target Gestao_Biblioteca
 Gestao_Biblioteca_OBJECTS = \
+"CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj" \
 "CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj" \
 "CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj" \
 "CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj" \
@@ -314,6 +328,7 @@ Gestao_Biblioteca_OBJECTS = \
 # External object files for target Gestao_Biblioteca
 Gestao_Biblioteca_EXTERNAL_OBJECTS =
 
+Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/FilaDocumento.cpp.obj
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaExemplar.cpp.obj
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/EstruturasDados/PilhaExemplar.cpp.obj
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/Encapsuladores/EntradaLeitor.cpp.obj
@@ -336,7 +351,7 @@ Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/build.make
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/linklibs.rsp
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/objects1.rsp
 Gestao_Biblioteca.exe: CMakeFiles/Gestao_Biblioteca.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Gestao_Biblioteca.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Gestao_Biblioteca.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Gestao_Biblioteca.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

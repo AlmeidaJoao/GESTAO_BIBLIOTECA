@@ -140,6 +140,12 @@
 		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaLeitor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.cpp">
+			<Option target="Gestao_Biblioteca"/>
+		</Unit>
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.h">
+			<Option target="Gestao_Biblioteca"/>
+		</Unit>
 		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaLeitor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
