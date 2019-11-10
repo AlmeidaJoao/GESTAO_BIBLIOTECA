@@ -138,17 +138,21 @@ void Biblioteca::adicionarLivro() {
     getline(cin, editora);
     cout << "ISBN: ";
     getline(cin, ISBN);
-    cout << "Cota: ";
-    cin >> cota;
-    cin.ignore();
+    do{
+        cout << "Cota: ";
+        cin >> cota;
+        if(cota < 0 || cota > 10)
+            cout<<"Cota Invalida"<<endl;
+    }while(cota < 0 || cota > 10);
+    //cin.ignore();
     cout << "Autor: ";
     getline(cin, nome_autor);
 
-    //Validacao
-    if(cota > 10 || cota < 0){
-        cout << "::>>Cota deve ser menor que 10!\n\n";
-        return;
-    }
+//    //Validacao
+//    if(cota > 10 || cota < 0){
+//        cout << "::>>Cota deve ser menor que 10!\n\n";
+//        return;
+//    }
 
     printf("=================\n\nTitulo:%s \n Assunto:%s \n Editora:%s \n ISBN: %s \n Autor:%s\n===============\n\n", titulo.c_str(), assunto.c_str(), editora.c_str(), ISBN.c_str(), nome_autor.c_str());
 
