@@ -116,6 +116,7 @@ void inserirDocumento()
         cout<<"=============================="<<endl;
         cout<<"Introduza uma opcao : ";
         cin>>opcao;
+        cin.ignore();
         switch(opcao)
         {
             case 1:bib->adicionarLivro(); break;

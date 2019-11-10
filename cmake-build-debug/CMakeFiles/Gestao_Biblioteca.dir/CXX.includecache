@@ -6,87 +6,87 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h
 Encapsuladores/EntradaDoc.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaDoc.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.cpp
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.cpp
 algorithm
 -
 iostream
 -
 Biblioteca.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h
 EstruturasDados/FilaDocumento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaDocumento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.h
 CD.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.h
 DVD.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.h
 Revista.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h
 Livro.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Livro.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h
 Encapsuladores/EntradaDoc.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaDoc.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.h
 Encapsuladores/EntradaAutor.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaAutor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaAutor.h
 Encapsuladores/EntradaLeitor.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaLeitor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaLeitor.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.h
 Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.h
 Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 string
 -
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaAutor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaAutor.h
 ../Autor.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaDoc.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.h
 ../Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaLeitor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaLeitor.h
 ../Leitor.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Leitor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaDocumento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.h
 ../Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h
 Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h
 Exemplar.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h
 Livro.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Livro.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Leitor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h
 string
 -
 ExemplarLivro.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Livro.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h
 Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 Autor.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h
 
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.h
 Documento.h
-C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h
 

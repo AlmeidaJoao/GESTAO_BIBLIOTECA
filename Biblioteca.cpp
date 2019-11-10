@@ -165,7 +165,7 @@ void Biblioteca::adicionarLivro() {
     autor->adicionarDocumentos(livro);
 
 
-    cout << "Livro Inserido!" << endl;
+    cout << "::: Livro Inserido! :::" << endl;
 
 }
 
@@ -177,18 +177,21 @@ void Biblioteca::adicionarCD()
     int ano, cota;
 
     cout << "Titulo:  ";
-    cin>>titulo;
+    getline(cin, titulo);
     cout << "Assunto: ";
-    cin>>assunto;
+    getline(cin,assunto);
     cout << "Editora: ";
-    cin>>editora;
+    getline(cin,editora);
     cout << "Ano: ";
     cin>>ano;
+    cin.ignore();
     cout<<"\nIntroduza a duracao do CD"<<endl;
     cin>>duracao;
+    cin.ignore();
     CD* newCD = new CD(titulo,assunto,editora,ano,cota,duracao);
     newCD->setDuracao(duracao);
-    cout<<"\nCD adicionado com sucesso"<<endl;
+    inserirDocumento(newCD);
+    cout<<"\n::: CD Inserido com sucesso! :::\n"<<endl;
 }
 
 //metodo para adicionar um DVD
@@ -198,18 +201,21 @@ void Biblioteca::adicionarDVD()
     string titulo, assunto, editora;
     int ano, cota;
     cout << "Titulo:  ";
-    cin>>titulo;
+    getline(cin, titulo);
     cout << "Assunto: ";
-    cin>>assunto;
+    getline(cin, assunto);
     cout << "Editora: ";
-    cin>>editora;
+    getline(cin, editora);
     cout << "Ano: ";
     cin>>ano;
-    cout<<"\nIntroduza a duracao do DVD"<<endl;
+    cin.ignore();
+    cout<<"Introduza a duracao do DVD: "<<endl;
     cin>>duracao;
+    cin.ignore();
     DVD* newDVD = new DVD(titulo,assunto,editora,ano,cota,duracao);
     newDVD->setDuracao(duracao);
-    cout<<"\nDVD adicionado com sucesso"<<endl;
+    inserirDocumento(newDVD);
+    cout<<"\n::: DVD Inserido com sucesso! :::\n"<<endl;
 }
 
 //metodo para adicionar REVISTa
@@ -221,22 +227,26 @@ void Biblioteca::adicionarRevista()
     string ISSN;
     string url;
     cout << "Titulo:  ";
-    cin>>titulo;
+    getline(cin, titulo);
     cout << "Assunto: ";
-    cin>>assunto;
+    getline(cin, assunto);
     cout << "Editora: ";
-    cin>>editora;
+    getline(cin, editora);
     cout << "Ano: ";
     cin>>ano;
-    cout<<"\nIntroduza o ISSN da revista"<<endl;
+    cin.ignore();
+    cout<<"\nIntroduza o ISSN da revista: "<<endl;
     cin>>ISSN;
-    cout<<"\nIntroduza a url da revista"<<endl;
+    cin.ignore();
+    cout<<"\nIntroduza a url da revista: "<<endl;
     cin>>url;
+    cin.ignore();
 
     Revista* revista = new Revista(titulo,assunto,editora,ano,cota,ISSN,url);
     revista->setISSN(ISSN);
     revista->setUrl(url);
-    cout<<"Revista adicionada com sucesso"<<endl;
+    inserirDocumento(revista);
+    cout<<"\n::: Revista Inserida com sucesso! :::\n"<<endl;
 }
 //metodo para validar a cota
 int Biblioteca::validarCota()

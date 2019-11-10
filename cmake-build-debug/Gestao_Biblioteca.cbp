@@ -8,190 +8,190 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Gestao_Biblioteca">
-				<Option output="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Gestao_Biblioteca.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option output="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Gestao_Biblioteca.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0/x86_64-w64-mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Gestao_Biblioteca/fast">
-				<Option output="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Gestao_Biblioteca.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option output="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Gestao_Biblioteca.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0/x86_64-w64-mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../include/c++/8.2.0/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/include-fixed"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/x86_64-w64-mingw32/8.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gestao_Biblioteca/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Autor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Biblioteca.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CD.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/DVD.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Documento.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaAutor.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaAutor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaAutor.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaAutor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaDoc.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaDoc.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaDoc.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaExemplar.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaExemplar.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaExemplar.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaExemplar.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaFila.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaFila.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaFila.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaFila.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaLeitor.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaLeitor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaLeitor.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Encapsuladores/EntradaLeitor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaDocumento.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaDocumento.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaDocumento.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaLeitor.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaLeitor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaLeitor.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/FilaLeitor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/PilhaExemplar.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/PilhaExemplar.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/PilhaExemplar.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/EstruturasDados/PilhaExemplar.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Exemplar.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Exemplar.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/ExemplarLivro.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/ExemplarLivro.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Leitor.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Leitor.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Leitor.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Livro.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Livro.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Livro.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.h">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/Revista.h">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/main.cpp">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/main.cpp">
 			<Option target="Gestao_Biblioteca"/>
 		</Unit>
-		<Unit filename="C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CMakeLists.txt">
+		<Unit filename="C:/Users/Nozotrox/Documents/Feliciano/ISCTEM/Segundo_Ano/Segundo_Semestre/Algoritmos_e_Estruturas_de_Dados/Codes/Gestao_Biblioteca/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
