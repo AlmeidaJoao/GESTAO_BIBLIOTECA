@@ -143,7 +143,7 @@ void Biblioteca::adicionarLivro() {
         cin >> cota;
         if(cota < 0 || cota > 10)
             cout<<"Cota Invalida"<<endl;
-    }while(cota < 0 || cota > 10);
+    }while(cota < 0 || cota >    10);
     //cin.ignore();
     cout << "Autor: ";
     getline(cin, nome_autor);
