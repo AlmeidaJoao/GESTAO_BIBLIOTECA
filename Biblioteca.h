@@ -38,6 +38,9 @@ public:
     //void inserirDocumento(Documento* documento); //::>> Insercao de qualquer tipo de documento
 
     void adicionarLivro(); //::>> Insercao de um livro atraves de um prompt
+    void adicionarCD(); // Insercao de um CD
+    void adicionarDVD(); //Insercao de um DVD
+    void adicionarRevista(); //Insercao de uma revista
     void emprestarLivro(); //::>> Emprestiom de um livro atraves de um prompt
     void receberLivro(); //::>> Valida o leitor com um prompt atraves do seu nome
     void receberLivro(Leitor* leitor); //::>> Devolve um dos livros que levou emprestado atraves de um prompt
@@ -45,6 +48,7 @@ public:
     void removerDocumento(); //::>> Remove o documento partindo do codigo;
     void pesquisarDocumento(); //::>> Pesquisa o documento com um prompt que vai permitir que possa escolher se pretende fazer por codigo ou titulo
     void pesquisarAutor();
+    int validarCota();
 
 
 

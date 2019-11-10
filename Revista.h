@@ -9,18 +9,19 @@
 #include "Documento.h"
 
 class Revista: public Documento {
-private:
     string ISSN;
     string url;
 
 public:
     Revista();
+    Revista(string titulo, string assunto, string editora, int ano, int cota,string issn,string url);
     Revista(const Revista &revista);
     ~Revista();
     string getISSN();
     string getUrl();
     void setISSN(string ISSN);
     void setUrl(string url);
+
 
 };
 

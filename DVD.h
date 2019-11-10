@@ -11,7 +11,7 @@
 class DVD: public Documento{
     int duracao; //::>> em segundos
 public:
-    DVD();
+    DVD(string titulo, string assunto, string editora, int ano, int cota,int i);
     ~DVD();
     int getDuracao();
     void setDuracao(int duracao);

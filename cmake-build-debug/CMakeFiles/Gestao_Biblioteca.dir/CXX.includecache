@@ -19,6 +19,12 @@ Biblioteca.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.h
 EstruturasDados/FilaDocumento.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/EstruturasDados/FilaDocumento.h
+CD.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.h
+DVD.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.h
+Revista.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.h
 
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Biblioteca.h
 Livro.h
@@ -29,6 +35,14 @@ Encapsuladores/EntradaAutor.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaAutor.h
 Encapsuladores/EntradaLeitor.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Encapsuladores/EntradaLeitor.h
+
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/CD.h
+Documento.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
+
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/DVD.h
+Documento.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
 
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
 string
@@ -71,4 +85,8 @@ Documento.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
 Autor.h
 C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Autor.h
+
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Revista.h
+Documento.h
+C:/Users/acer/Desktop/CLionProjects/GESTAO_BIBLIOTECA/Documento.h
 

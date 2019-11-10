@@ -7,6 +7,9 @@
 #include <iostream>
 #include "Biblioteca.h"
 #include "EstruturasDados/FilaDocumento.h"
+#include "CD.h"
+#include "DVD.h"
+#include "Revista.h"
 
 Biblioteca::Biblioteca() {
     size = 0;
@@ -138,21 +141,9 @@ void Biblioteca::adicionarLivro() {
     getline(cin, editora);
     cout << "ISBN: ";
     getline(cin, ISBN);
-    do{
-        cout << "Cota: ";
-        cin >> cota;
-        if(cota < 0 || cota > 10)
-            cout<<"Cota Invalida"<<endl;
-    }while(cota < 0 || cota >    10);
-    //cin.ignore();
+    cota = validarCota();
     cout << "Autor: ";
     getline(cin, nome_autor);
-
-//    //Validacao
-//    if(cota > 10 || cota < 0){
-//        cout << "::>>Cota deve ser menor que 10!\n\n";
-//        return;
-//    }
 
     printf("=================\n\nTitulo:%s \n Assunto:%s \n Editora:%s \n ISBN: %s \n Autor:%s\n===============\n\n", titulo.c_str(), assunto.c_str(), editora.c_str(), ISBN.c_str(), nome_autor.c_str());
 
@@ -170,12 +161,94 @@ void Biblioteca::adicionarLivro() {
     livro->setAutor(autor);
     //Inserir o livro na biblioteca
     inserirLivro(livro);
-    //Reacionar o autor ao livro
+    //Relacionar o autor ao livro
     autor->adicionarDocumentos(livro);
 
 
     cout << "Livro Inserido!" << endl;
 
+}
+
+//metodo para adicionar um CD
+void Biblioteca::adicionarCD()
+{
+    int duracao;
+    string titulo, assunto, editora;
+    int ano, cota;
+
+    cout << "Titulo:  ";
+    cin>>titulo;
+    cout << "Assunto: ";
+    cin>>assunto;
+    cout << "Editora: ";
+    cin>>editora;
+    cout << "Ano: ";
+    cin>>ano;
+    cout<<"\nIntroduza a duracao do CD"<<endl;
+    cin>>duracao;
+    CD* newCD = new CD(titulo,assunto,editora,ano,cota,duracao);
+    newCD->setDuracao(duracao);
+    cout<<"\nCD adicionado com sucesso"<<endl;
+}
+
+//metodo para adicionar um DVD
+void Biblioteca::adicionarDVD()
+{
+    int duracao;
+    string titulo, assunto, editora;
+    int ano, cota;
+    cout << "Titulo:  ";
+    cin>>titulo;
+    cout << "Assunto: ";
+    cin>>assunto;
+    cout << "Editora: ";
+    cin>>editora;
+    cout << "Ano: ";
+    cin>>ano;
+    cout<<"\nIntroduza a duracao do DVD"<<endl;
+    cin>>duracao;
+    DVD* newDVD = new DVD(titulo,assunto,editora,ano,cota,duracao);
+    newDVD->setDuracao(duracao);
+    cout<<"\nDVD adicionado com sucesso"<<endl;
+}
+
+//metodo para adicionar REVISTa
+void Biblioteca::adicionarRevista()
+{
+    int duracao;
+    string titulo, assunto, editora;
+    int ano, cota;
+    string ISSN;
+    string url;
+    cout << "Titulo:  ";
+    cin>>titulo;
+    cout << "Assunto: ";
+    cin>>assunto;
+    cout << "Editora: ";
+    cin>>editora;
+    cout << "Ano: ";
+    cin>>ano;
+    cout<<"\nIntroduza o ISSN da revista"<<endl;
+    cin>>ISSN;
+    cout<<"\nIntroduza a url da revista"<<endl;
+    cin>>url;
+
+    Revista* revista = new Revista(titulo,assunto,editora,ano,cota,ISSN,url);
+    revista->setISSN(ISSN);
+    revista->setUrl(url);
+    cout<<"Revista adicionada com sucesso"<<endl;
+}
+//metodo para validar a cota
+int Biblioteca::validarCota()
+{
+    int cota;
+    do{
+        cout << "Cota: ";
+        cin >> cota;
+        if(cota < 0 || cota > 10)
+            cout<<"Cota Invalida"<<endl;
+    }while(cota < 0 || cota >    10);
+    return cota;
 }
 
 void Biblioteca::emprestarLivro() {
@@ -575,5 +648,3 @@ Documento* Biblioteca::findDocumento(string titulo){
 
     return entradaDoc->documento;
 }
-
-

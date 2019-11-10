@@ -10,6 +10,8 @@ CMakeFiles/Gestao_Biblioteca.dir/Autor.cpp.obj: ../EstruturasDados/FilaDocumento
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Autor.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Biblioteca.cpp
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Biblioteca.h
+CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../CD.h
+CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../DVD.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Documento.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Encapsuladores/EntradaAutor.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Encapsuladores/EntradaDoc.h
@@ -19,6 +21,7 @@ CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Exemplar.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../ExemplarLivro.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Leitor.h
 CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Livro.h
+CMakeFiles/Gestao_Biblioteca.dir/Biblioteca.cpp.obj: ../Revista.h
 
 CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj: ../CD.cpp
 CMakeFiles/Gestao_Biblioteca.dir/CD.cpp.obj: ../CD.h

@@ -12,7 +12,7 @@ class CD: public Documento{
 private:
     int duracao; //::>> em segundos
 public:
-    CD();
+    CD(string titulo, string assunto, string editora, int ano, int cota,int duracao);
     ~CD();
     int getDuracao();
     void setDuracao(int duracao);

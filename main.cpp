@@ -91,26 +91,55 @@ void inserirDadosPreliminares(){
 
 void imprimirMenu(){
     printf("====================%s==================\n", "MENU");
-    printf("1.%s", "Adicionar Livro\n");
+    printf("1.%s", "Adicionar Documento\n");
     printf("2.%s", "Levar Emprestado Livro\n");
     printf("3.%s", "Devolver Livro\n");
     printf("4.%s", "Pesquisar Documento\n");
     printf("5.%s", "Pesquisar Autor\n");
     printf("6.%s", "Remover Documento\n");
-    printf("7.%s", "Fazer impressoes");
+    printf("7.%s", "Fazer impressoes\n");
+    printf("8.%s", "Sair");
     printf("\n====================%s==================\n", "/\\");
 }
+
+//metodo para inserir documento
+void inserirDocumento()
+{
+    int opcao;
+    do{
+        cout<<"=============================="<<endl;
+        cout<<"1. Inserir Livro"<<endl;
+        cout<<"2. Inserir CD"<<endl;
+        cout<<"3. Inserir DVD"<<endl;
+        cout<<"4. Inserir Revista"<<endl;
+        cout<<"5. Voltar"<<endl;
+        cout<<"=============================="<<endl;
+        cout<<"Introduza uma opcao : ";
+        cin>>opcao;
+        switch(opcao)
+        {
+            case 1:bib->adicionarLivro(); break;
+            case 2:bib->adicionarCD(); break;
+            case 3:bib->adicionarDVD(); break;
+            case 4:bib->adicionarRevista(); break;
+            case 5: break;
+        }
+    }while(opcao!=5);
+
+}
+
 
 void usarOpcao(int i){
     cin.ignore();
     switch (i) {
-        case 1: bib->adicionarLivro();break;
+        case 1: inserirDocumento();break;
         case 2: bib->emprestarLivro();break;
         case 3: bib->receberLivro(); break;
         case 4: bib->pesquisarDocumento();break;
         case 5: bib->pesquisarAutor(); break;
         case 6: bib->removerDocumento();break;
         case 7: bib->executarImpressoes(); break;
+        case 8: exit(0);break;
         default: printf("#OPCAO NAO VALIDA");
     }
 
