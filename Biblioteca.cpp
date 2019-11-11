@@ -44,6 +44,12 @@ bool Biblioteca::isFull() {
 
 //===================================== METODOS COM PROMPT ====================================
 void Biblioteca::inserirDocumento() {
+    //::>> Verificar se esta cheio
+    if(isFull()){
+        //::>> Expandir a tabela
+        cout << "\n\n::::::Biblioteca Cheida!!::::\n\n";
+        return;
+    }
     int opcao;
     do{
         cout<<"=============================="<<endl;
@@ -290,6 +296,7 @@ void Biblioteca::removerDocumento() {
 }
 
 void Biblioteca::adicionarLivro() {
+
     string titulo, assunto, editora, ISBN, nome_autor;
     int ano, cota,  nPaginas;
 
@@ -765,11 +772,7 @@ int Biblioteca::hash(string str) {
 }
 
 void Biblioteca::inserirDocumento(Documento *doc) {
-    //::>> Verificar se esta cheio
-    if(isFull()){
-        //::>> Expandir a tabela
-        return;
-    }
+
 
     string titulo = doc->getTitulo();
     transform(titulo.begin(), titulo.end(), titulo.begin(), ::tolower); // converter para lowercase
@@ -799,11 +802,6 @@ void Biblioteca::inserirLeitor(Leitor *leitor) {
 }
 
 void Biblioteca::inserirLivro(Livro *doc) {
-    //::>> Verificar se esta cheio
-    if(isFull()){
-        //::>> Expandir a tabela
-        return;
-    }
 
     string titulo = doc->getTitulo();
     transform(titulo.begin(), titulo.end(), titulo.begin(), ::tolower); // converter para lowercase

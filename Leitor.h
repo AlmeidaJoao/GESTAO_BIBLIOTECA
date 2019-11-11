@@ -32,6 +32,7 @@ private:
 
 
 public:
+    static int ultimoCodigo;
     Leitor();
     Leitor(string nome, string categoria, string data_inscricao, int validade);
     Leitor(const Leitor &leitor);

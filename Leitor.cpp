@@ -2,8 +2,10 @@
 // Created by nozotrox on 10/4/19.
 //
 
-#include <ctime>
+
 #include "Leitor.h"
+
+int Leitor::ultimoCodigo = 4001;
 
 Leitor::Leitor() {
     nome = "#";
@@ -27,14 +29,14 @@ Leitor::Leitor(const Leitor &leitor) {
     this->numero_leitor = leitor.numero_leitor;
 }
 Leitor::Leitor(string nome, string categoria, string data_inscricao, int validade) {
-    srand(time(NULL));
+
     this->nome = nome;
     this->categoria = categoria;
     this->data_inscricao = data_inscricao;
     this->validade = validade;
     this->docEmConsulta = NULL;
     this->livrosLevados = 0;
-    this->numero_leitor =  rand() % 1000 + 3000;
+    this->numero_leitor =  ultimoCodigo++;
     // Definicao da prioridade
     if(categoria == "P"){
         prioridade = 1;

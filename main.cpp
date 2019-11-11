@@ -1,14 +1,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <algorithm>
-#include <time.h>
 #include <fstream>
 
-#include <iostream>
-#include <fstream>
-#include <stdio.h>
 #include <string>
-#include <string.h>
+
 #include <bits/stdc++.h>
 
 #include "Livro.h"
@@ -108,8 +104,8 @@ void lerFicheiro(){
     string line;
     string titulo, assunto,autorName, editora, ISBN, nome_autor;
     string ano, cota,  nPaginas;
-//    ifstream myfile ("C:\\Users\\acer\\Desktop\\CLionProjects\\GESTAO_BIBLIOTECA\\example.txt");
-/*C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\*/
+
+//    ifstream myfile("C:\\Users\\Nozotrox\\Documents\\Feliciano\\ISCTEM\\Segundo_Ano\\Segundo_Semestre\\Algoritmos_e_Estruturas_de_Dados\\Trabalho_Semestral\\example.txt")
     ifstream myfile("..\\example.txt");
 
     if (myfile.is_open()){
@@ -119,14 +115,20 @@ void lerFicheiro(){
             getline(ss,titulo,';');
             getline(ss,assunto,';');
             getline(ss,editora,';');
-            getline(ss,ano,';');
-            getline(ss,cota,';');
+            getline(ss, ano, ';');
+            getline(ss, cota, ';');
             getline(ss,ISBN,';');
-            getline(ss,nPaginas,';');
+            getline(ss, nPaginas, ';');
             getline(ss,autorName,';');
-            int anoX = stoi(ano);
-            int cotaX = stoi(cota);
-            int pages = stoi(nPaginas);
+
+            istringstream iss (ano);
+            istringstream iss2 (cota);
+            istringstream iss3 (nPaginas);
+            int anoX, cotaX, pages;
+            iss >> anoX;
+            iss2 >> cotaX;
+            iss3 >> pages;
+
             Livro* doc = new Livro(titulo,assunto,editora,anoX,cotaX,ISBN,pages);
             string name1 = typeid(doc).name();
 
@@ -173,7 +175,7 @@ void usarOpcao(int i){
                 pass = 1;
             } else {
                 cout << "!!!!DADOS JA INSERIDOS!!!!";
-             }
+            }
 
             break;
         case 1: bib->inserirDocumento(); pass=1; break;
@@ -181,42 +183,42 @@ void usarOpcao(int i){
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->emprestarLivro();break;
+                bib->emprestarLivro();break;
         case 3:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->receberLivro(); break;
+                bib->receberLivro(); break;
         case 4:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->pesquisarDocumento();break;
+                bib->pesquisarDocumento();break;
         case 5:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->pesquisarAutor(); break;
+                bib->pesquisarAutor(); break;
         case 6:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->removerDocumento();break;
+                bib->removerDocumento();break;
         case 7:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->executarImpressoes(); break;
+                bib->executarImpressoes(); break;
         case 8:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->reporExemplares(); break;
+                bib->reporExemplares(); break;
         case 9:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
-              bib->executarConsultas(); break;
+                bib->executarConsultas(); break;
         case 10: exit(0);break;
         default: printf("#OPCAO NAO VALIDA");
     }
