@@ -84,13 +84,13 @@ void Livro::cederLivro(Leitor* leitor) {
         // Verificar se existe alguem na lista de espera
         if(areWaiting()){
             // Verificar se resta livro para os que estao na lista de espera
-            bool seResta = (exemplarDisp - nLeitoresEpera) > 0;
+            bool seResta = (exemplarDisp - nLeitoresEpera) > 0 && cota > 0;
             if(seResta){
                 emprestarLivro(leitor);
             } else {
                 // Verificar se o leitor e o que esta no topo da lista de espera
                 int codPrimeiro = leitores->verPrimeiro()->getNumeroLeitor();
-                if(leitor->getNumeroLeitor() == codPrimeiro){
+                if(leitor->getNumeroLeitor() == codPrimeiro && cota > 0){
                     emprestarLivro(leitor);
                     return;
                 }
@@ -99,30 +99,34 @@ void Livro::cederLivro(Leitor* leitor) {
                 cout << "::: Livro nao esta disponivel. Sera adicionado a lista de espera. " << endl;
 
 
-                if(!leitores->inList(leitor)){
-                    // Leitor nao estava na lista de espera e devera ser adicionado
-                    leitores->inserirLeitor(leitor);
-                    nLeitoresEpera++;
-                    // Imprimir lista de espera
-                }
-                leitores->toString();
+               adicionarAListaDeEspera(leitor);
             }
         } else {
             // Se nao existem leitores na lista de espera
-            emprestarLivro(leitor);
+            if(cota > 0){
+                emprestarLivro(leitor);
+            } else {
+                cout << "::: Livro nao esta disponivel. Sera adicionado a lista de espera. " << endl;
+                adicionarAListaDeEspera(leitor);
+            }
+
         }
     } else {
         // Livro nao esta disponivel: Adicionar a lista de espera
         cout << "::: Livro nao esta disponivel. Sera adicionado a lista de espera. " << endl;
-        // Adicionar a lista de espera
-        if(!leitores->inList(leitor)){
-            leitores->inserirLeitor(leitor);
-            nLeitoresEpera++;
-        }
-        // Imprimir lista de espera
-        leitores->toString();
+        adicionarAListaDeEspera(leitor);
 
     }
+}
+
+void Livro::adicionarAListaDeEspera(Leitor *leitor) {
+    // Adicionar a lista de espera
+    if(!leitores->inList(leitor)){
+        leitores->inserirLeitor(leitor);
+        nLeitoresEpera++;
+    }
+    // Imprimir lista de espera
+    leitores->toString();
 }
 
 

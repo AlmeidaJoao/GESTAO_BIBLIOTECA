@@ -42,6 +42,7 @@ public:
     void receberExemplar(ExemplarLivro* exemplarLivro); //::>> Recebe o livro do leitor e guarda na usa fila de exemplares
     void setISBN(string isbn);
     void setAutor(Autor* autor);
+    void adicionarAListaDeEspera(Leitor* leitor);
     void setDominioEmprestimo(Leitor dominioEmprestimo[]);
     void setExemplaresLivro(ExemplarLivro exemplaresLivro[]);
     void toString();

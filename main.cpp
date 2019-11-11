@@ -22,7 +22,7 @@ using namespace std;
 
 
 Biblioteca *bib = new Biblioteca();
-int opc;
+int opc = -1;
 bool pass = false;
 void lerFicheiro();
 void inserirDadosPreliminares();
@@ -36,6 +36,10 @@ int main() {
         imprimirMenu();
         cout << endl << "Opcao: ";
         cin >> opc;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
         usarOpcao(opc);
     }
 
@@ -104,12 +108,13 @@ void lerFicheiro(){
     string line;
     string titulo, assunto,autorName, editora, ISBN, nome_autor;
     string ano, cota,  nPaginas;
-    ifstream myfile ("C:\\Users\\acer\\Desktop\\CLionProjects\\GESTAO_BIBLIOTECA\\example.txt");
-    if (myfile.is_open())
-    {
+//    ifstream myfile ("C:\\Users\\acer\\Desktop\\CLionProjects\\GESTAO_BIBLIOTECA\\example.txt");
+/*C:\Users\Nozotrox\Documents\Feliciano\ISCTEM\Segundo_Ano\Segundo_Semestre\Algoritmos_e_Estruturas_de_Dados\Codes\Gestao_Biblioteca\*/
+    ifstream myfile("..\\example.txt");
 
-        while ( getline (myfile,line) )
-        {
+    if (myfile.is_open()){
+
+        while ( getline (myfile,line) ) {
             stringstream ss(line);
             getline(ss,titulo,';');
             getline(ss,assunto,';');
@@ -141,9 +146,10 @@ void lerFicheiro(){
     }
     else cout << "Unable to open file";
 }
+
 void imprimirMenu(){
-    printf("====================%s==================\n", "MENU");
-    printf("0.%s", "Carregar Dados\n");
+    printf("\n\n====================%s==================\n", "MENU");
+    if(!pass) printf("0.%s", "Carregar Dados\n");
     printf("1.%s", "Adicionar Documento\n");
     printf("2.%s", "Levar Emprestado Livro\n");
     printf("3.%s", "Devolver Livro\n");
@@ -151,46 +157,26 @@ void imprimirMenu(){
     printf("5.%s", "Pesquisar Autor\n");
     printf("6.%s", "Remover Documento\n");
     printf("7.%s", "Fazer impressoes\n");
-    printf("8.%s", "Sair");
+    printf("8.%s", "Repor exemplares\n");
+    printf("9.%s", "Consultas\n");
+    printf("10.%s", "Sair");
+
     printf("\n====================%s==================\n", "/\\");
-}
-
-//metodo para inserir documento
-void inserirDocumento()
-{
-    int opcao;
-    do{
-        cout<<"=============================="<<endl;
-        cout<<"1. Inserir Livro"<<endl;
-        cout<<"2. Inserir CD"<<endl;
-        cout<<"3. Inserir DVD"<<endl;
-        cout<<"4. Inserir Revista"<<endl;
-        cout<<"5. Voltar"<<endl;
-        cout<<"=============================="<<endl;
-        cout<<"Introduza uma opcao : ";
-        cin>>opcao;
-        cin.ignore();
-        switch(opcao)
-        {
-            case 1:bib->adicionarLivro(); break;
-            case 2:bib->adicionarCD(); break;
-            case 3:bib->adicionarDVD(); break;
-            case 4:bib->adicionarRevista(); break;
-            case 5: break;
-        }
-    }while(opcao!=5);
-
 }
 
 
 void usarOpcao(int i){
     switch (i) {
-        case 0:
-            inserirDadosPreliminares();
-            lerFicheiro();
-            pass = 1;
+        case 0: if(!pass){
+                inserirDadosPreliminares();
+                lerFicheiro();
+                pass = 1;
+            } else {
+                cout << "!!!!DADOS JA INSERIDOS!!!!";
+             }
+
             break;
-        case 1: inserirDocumento();break;
+        case 1: bib->inserirDocumento(); pass=1; break;
         case 2:
             if(!pass )
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
@@ -221,7 +207,17 @@ void usarOpcao(int i){
                 cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
             else
               bib->executarImpressoes(); break;
-        case 8: exit(0);break;
+        case 8:
+            if(!pass )
+                cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
+            else
+              bib->reporExemplares(); break;
+        case 9:
+            if(!pass )
+                cout<<"!!!!CARREGUE OS DADOS PRIMEIRO!!!"<<endl;
+            else
+              bib->executarConsultas(); break;
+        case 10: exit(0);break;
         default: printf("#OPCAO NAO VALIDA");
     }
     cout << endl;

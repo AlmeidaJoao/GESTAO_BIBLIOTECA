@@ -34,6 +34,7 @@ public:
     Documento* getDocumento();
     void setSituacao(bool situacao);
     void setEstado(Estado estado);
+    void toString();
 };
 
 

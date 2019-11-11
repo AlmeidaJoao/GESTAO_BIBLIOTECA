@@ -28,7 +28,7 @@ private:
     int validade;
     int livrosLevados; //Controla o numero de livros levados em emprestimo
     ExemplarLivro* livroEmprestado[MAX_LIVROS_EMPRESTADOS] = {0}; //Lista que armazena os livros emprestados pelo leitor
-    Documento* docEmConsulta;
+    Exemplar* docEmConsulta;
 
 
 public:
@@ -44,7 +44,7 @@ public:
     string getDataInscricao();
     int getValidade();
     ExemplarLivro* getExemplaresLivro();
-    Documento* getDocEmConsulta();
+    Exemplar* getDocEmConsulta();
     bool levarLivro(ExemplarLivro* livro);
     ExemplarLivro* devolverLivro(int codigoExemplar);
     void setNome(string nome);
@@ -53,7 +53,7 @@ public:
     void setPrioridade(int prioridade);
     void setDataInscricao(string dataInscricao);
     void setValidade(int validade);
-    void setDocEmConsulta(Documento* docEmConsulta);
+    void setDocEmConsulta(Exemplar* docEmConsulta);
 
 };
 

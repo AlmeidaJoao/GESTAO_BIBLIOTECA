@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include "Leitor.h"
 #include "Documento.h"
 #include "ExemplarLivro.h"
 
@@ -28,6 +29,20 @@ Documento::Documento(string titulo, string assunto, string editora, int ano, int
     this->editora = editora;
     this->ano = ano;
     this->cota = cota;
+    criarExemplar(cota);
+}
+
+Documento::Documento(string titulo, string assunto, string editora, int ano, int cota, string tipo) {
+    // Gerar um codigo unico
+    // inicializacao do numero random. E so feita uma
+
+    this->codigo = ultimoCodigo++;
+    this->titulo = titulo;
+    this->assunto = assunto;
+    this->editora = editora;
+    this->ano = ano;
+    this->cota = cota;
+    this->tipo = tipo;
     criarExemplar(cota);
 }
 
@@ -117,9 +132,9 @@ void Documento::criarExemplar(int cota) {
     srand(time(NULL)); // inicializacao do numero random. E so feita uma vez
     int codigoDocumento; //codigo random para o exemplar
 
-    if(cota == MAX_COTA_LIVRO){
+    if(tipo == "Livro"){
         //::>> Criacao de exemplares de livro
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < cota; i++){
             codigoDocumento = rand() % 1000 + 2000;
             //::>> Fazer dowcast para livro como o construtor faz o uso de livro
             ExemplarLivro* exemplar = new ExemplarLivro(false, BOM , codigoDocumento , static_cast<Livro *>(this));
@@ -136,6 +151,19 @@ void Documento::criarExemplar(int cota) {
         }
 
     }
+}
+
+void Documento::cederLivroConsulta(Leitor *leitor) {
+    Exemplar* exemplar = exemplares[cota - 1];
+    leitor->setDocEmConsulta(exemplar);
+    exemplares[cota-1] = NULL;
+    cota--;
+}
+
+void Documento::retornarLivroConsulta(Leitor *leitor) {
+    exemplares[cota] = leitor->getDocEmConsulta();
+    leitor->setDocEmConsulta(NULL);
+    cota++;
 }
 
 

@@ -10,11 +10,11 @@
 #include <string>
 
 
-
 using namespace std;
 
 class Exemplar;
 class FilaLeitor;
+class Leitor;
 
 
 class Documento {
@@ -34,6 +34,7 @@ public:
     static int ultimoCodigo;
     Documento();
     Documento(string titulo, string assunto, string editora, int ano, int cota);
+    Documento(string titulo, string assunto, string editora, int ano, int cota, string tipo);
     Documento(const Documento &doc);
     ~Documento();
     int getCodigo();
@@ -44,6 +45,8 @@ public:
     int getCota(); //::>> Retorna o numero de expemplares que o documento possui
     string getEditora();
     Exemplar* getExemplares();
+    void cederLivroConsulta(Leitor* leitor); // Ceder o livro para que o leitor consulte
+    void retornarLivroConsulta(Leitor* leitor); // Rotornar o livro consultado
     int getAno();
     void setTitulo(string titulo);
     void setAssunto(string assuto);

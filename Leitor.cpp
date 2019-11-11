@@ -17,12 +17,22 @@ Leitor::Leitor() {
     docEmConsulta = NULL;
 }
 
+Leitor::Leitor(const Leitor &leitor) {
+    this->nome = leitor.nome;
+    this->categoria = leitor.categoria;
+    this->data_inscricao = leitor.data_inscricao;
+    this->validade = leitor.validade;
+    this->docEmConsulta = docEmConsulta;
+    this->livrosLevados = livrosLevados;
+    this->numero_leitor = leitor.numero_leitor;
+}
 Leitor::Leitor(string nome, string categoria, string data_inscricao, int validade) {
     srand(time(NULL));
     this->nome = nome;
     this->categoria = categoria;
     this->data_inscricao = data_inscricao;
     this->validade = validade;
+    this->docEmConsulta = NULL;
     this->livrosLevados = 0;
     this->numero_leitor =  rand() % 1000 + 3000;
     // Definicao da prioridade
@@ -69,7 +79,7 @@ ExemplarLivro* Leitor::getExemplaresLivro() {
     return *livroEmprestado;
 }
 
-Documento* Leitor::getDocEmConsulta() {
+Exemplar* Leitor::getDocEmConsulta() {
     return docEmConsulta;
 }
 
@@ -124,6 +134,6 @@ void Leitor::setValidade(int validade) {
     this->validade = validade;
 }
 
-void Leitor::setDocEmConsulta(Documento *docEmConsulta) {
+void Leitor::setDocEmConsulta(Exemplar *docEmConsulta) {
     this->docEmConsulta = docEmConsulta;
 }

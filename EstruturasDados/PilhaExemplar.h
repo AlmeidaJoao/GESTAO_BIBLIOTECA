@@ -18,7 +18,7 @@ public:
     ~PilhaExemplar();
     bool isEmpty();
     void enqueue(Exemplar* exemplar);
-    Exemplar dequeue();
+    Exemplar* dequeue();
 
 };
 

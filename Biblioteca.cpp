@@ -15,11 +15,13 @@ Biblioteca::Biblioteca() {
     size = 0;
     bookSize = 0;
     catalogoLivros = NULL;
+    pilhaExemplares = new PilhaExemplar();
 }
 
 Biblioteca::Biblioteca(const Biblioteca &biblioteca) {
     size = biblioteca.size;
     catalogoLivros = biblioteca.catalogoLivros;
+    pilhaExemplares = biblioteca.pilhaExemplares;
 }
 
 Biblioteca::~Biblioteca() {}
@@ -41,6 +43,154 @@ bool Biblioteca::isFull() {
 
 
 //===================================== METODOS COM PROMPT ====================================
+void Biblioteca::inserirDocumento() {
+    int opcao;
+    do{
+        cout<<"=============================="<<endl;
+        cout<<"1. Inserir Livro"<<endl;
+        cout<<"2. Inserir CD"<<endl;
+        cout<<"3. Inserir DVD"<<endl;
+        cout<<"4. Inserir Revista"<<endl;
+        cout<<"5. Voltar"<<endl;
+        cout<<"=============================="<<endl;
+        cout<<"Introduza uma opcao : ";
+        cin>>opcao;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
+        switch(opcao)
+        {
+            case 1:adicionarLivro(); break;
+            case 2:adicionarCD(); break;
+            case 3:adicionarDVD(); break;
+            case 4:adicionarRevista(); break;
+            case 5: break;
+        }
+    }while(opcao!=5);
+}
+
+void Biblioteca::executarConsultas() {
+    int opcao;
+    cout << "\n1. Consultar Documento\n2. Devolver Documento\nOpcao: ";
+    cin >> opcao;
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    if(opcao == 1){
+        consultarDocumento();
+    } else if (opcao == 2){
+        devolverDocConsulta();
+    } else {
+        cout << "\n::: OPCAO INVALIDA! ::::";
+    }
+
+}
+
+void Biblioteca::devolverDocConsulta() {
+    cout << endl;
+    string nomeLeitor;
+    cout << "Nome do leitor: ";
+    getline(cin, nomeLeitor);
+    Leitor* leitor = findLeitor(nomeLeitor);
+
+    // insercao de um novo leitor
+    if(leitor == NULL){
+        cout << "\n::: LEITOR NAO EXISTENTE ::::\n";
+    } else {
+        devolverDocConsulta(leitor);
+    }
+}
+
+void Biblioteca::consultarDocumento() {
+    cout << endl;
+    string nomeLeitor;
+    string tituloDocumento;
+    cout << "Nome do leitor: ";
+    getline(cin, nomeLeitor);
+    Leitor* leitor = findLeitor(nomeLeitor);
+
+    // insercao de um novo leitor
+    if(leitor == NULL){
+        cout << "\n:: Novo leitor ::\n";
+        leitor = inserirNovoLeitor(nomeLeitor);
+    }
+    cout << "\n\n=================================================" << endl;
+    imprimirTodosDocumentos();
+    cout << "=================================================\n\n" << endl;
+    cout << "Titulo do documento: ";
+    getline(cin, tituloDocumento);
+    Documento* doc = findDocumento(tituloDocumento);
+
+    if(doc != NULL){
+        //::>> Ceder o documento
+        consultarDocumento(leitor, doc);
+    } else  {
+        cout << "\n:::: DOCUMENTO NAO ENCONTRADO ::::\n";
+    }
+
+}
+
+void Biblioteca::reporExemplares() {
+    if(pilhaExemplares->isEmpty()){
+        cout << "\n::: NENHUM LIVRO NA PILHA :::\n";
+    }
+
+    while(!pilhaExemplares->isEmpty()){
+        int estado;
+        int opcao;
+        ExemplarLivro* exemplar = static_cast<ExemplarLivro*>(pilhaExemplares->dequeue());
+        cout << endl << endl << endl;
+        printf("%-10s %-20s %-30s\n", "Codigo", "Titulo", "Ultimo Leitor");
+        exemplar->toString();
+        cout << "Estado: \n 1.Bom \t 2.Medio \t 3.Mau\nOpcao: ";
+        cin >> estado;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
+        cin.ignore();
+        // Avalia o estado do exemplar // Caso escolha uma opcao invalida, repete a operacao inserindo novamente o exemplar na pilha
+        if(estado == 1){
+            exemplar->setEstado(BOM);
+        } else if (estado == 2){
+            exemplar->setEstado(MEDIO);
+        } else if(estado == 3){
+            exemplar->setEstado(MAU);
+        } else {
+            cout << " :: Opcao nao valida ::";
+            pilhaExemplares->enqueue(exemplar);
+            continue;
+        }
+
+        cout << "Confimar que foi o ultimo leitor? (1. Sim/ 0. Nao): ";
+        cin >> opcao;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
+        cin.ignore();
+        if(opcao == 1){
+            guardarLivro(exemplar);
+            "\n:: Exemplar Devolvido :: \n";
+        } else {
+            string nomeLeitor;
+            cout << "Insira o nome do leitor: ";
+            getline(cin, nomeLeitor);
+            Leitor* leitor = findLeitor(nomeLeitor);
+            if(leitor == NULL){
+                // Leitor nao pertence a biblioteca
+                cout << "\n::: Leitor nao pertence a biblioteca | Leitor desconhecido :::\n";
+                pilhaExemplares->enqueue(exemplar); // Devolver o exemplar a pilha para retomar o processo
+            } else {
+                exemplar->setUtlimoLeitor(leitor);
+                guardarLivro(exemplar);
+                "\n:: Exemplar Devolvido :: \n";
+            }
+        }
+
+    }
+}
+
 void Biblioteca::pesquisarAutor() {
     cout << endl;
     string nomeAutor;
@@ -71,14 +221,20 @@ void Biblioteca::pesquisarDocumento() {
     }
     cout << "Escolha a opcao: ";
     cin >> opcao;
-    cin.ignore();
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
     Documento* doc = NULL;
     if(opcao == 1){
         // realizar a pesquisa por codigo
         int codigo;
         cout << "\nCodigo do documento: ";
         cin >> codigo;
-        cin.ignore();
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
         doc = findDocumento(codigo);
 
     } else if (opcao == 2){
@@ -118,6 +274,10 @@ void Biblioteca::removerDocumento() {
         cout << "\n=======================\n";
         cout << "Remover? (1.sim, 0.nao): ";
         cin >> opcao;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
         if(opcao == 1){
             int hashCode = this->hash(documento->getTitulo());
             removerDocumento(hashCode, documento->getCodigo());
@@ -161,9 +321,6 @@ void Biblioteca::adicionarLivro() {
     livro->setAutor(autor);
     //Inserir o livro na biblioteca
     inserirLivro(livro);
-    //Relacionar o autor ao livro
-    autor->adicionarDocumentos(livro);
-
 
     cout << "::: Livro Inserido! :::" << endl;
 
@@ -185,7 +342,22 @@ void Biblioteca::adicionarCD()
     cout << "Ano: ";
     cin>>ano;
     cin.ignore();
-    cout<<"\nIntroduza a duracao do CD"<<endl;
+    cout << "Cota: ";
+    cin >> cota;
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
+    while(cota == 0 && cota > MAX_CAPACITY_EXEMPLAR){
+        cout << "Minimo: 1 exemplar!";
+        cout << "Cota: ";
+        cin >> cota;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
+    }
+    cout<<"\nIntroduza a duracao do CD (min): ";
     cin>>duracao;
     cin.ignore();
     CD* newCD = new CD(titulo,assunto,editora,ano,cota,duracao);
@@ -208,7 +380,23 @@ void Biblioteca::adicionarDVD()
     getline(cin, editora);
     cout << "Ano: ";
     cin>>ano;
+    ano = (ano > 2019)? 2019:ano; // validacao do ano
     cin.ignore();
+    cout << "Cota: ";
+    cin >> cota;
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
+    while(cota == 0 && cota > MAX_CAPACITY_EXEMPLAR){
+        cout << "Minimo: 1 exemplar!";
+        cout << "Cota: ";
+        cin >> cota;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
+    }
     cout<<"Introduza a duracao do DVD: "<<endl;
     cin>>duracao;
     cin.ignore();
@@ -221,9 +409,8 @@ void Biblioteca::adicionarDVD()
 //metodo para adicionar REVISTa
 void Biblioteca::adicionarRevista()
 {
-    int duracao;
     string titulo, assunto, editora;
-    int ano, cota;
+    int ano;
     string ISSN;
     string url;
     cout << "Titulo:  ";
@@ -234,6 +421,7 @@ void Biblioteca::adicionarRevista()
     getline(cin, editora);
     cout << "Ano: ";
     cin>>ano;
+    ano = (ano > 2019)? 2019:ano; // validacao do ano
     cin.ignore();
     cout<<"\nIntroduza o ISSN da revista: "<<endl;
     cin>>ISSN;
@@ -242,12 +430,13 @@ void Biblioteca::adicionarRevista()
     cin>>url;
     cin.ignore();
 
-    Revista* revista = new Revista(titulo,assunto,editora,ano,cota,ISSN,url);
+    Revista* revista = new Revista(titulo,assunto,editora,ano,1,ISSN,url); // Revista possui somente um exemplar
     revista->setISSN(ISSN);
     revista->setUrl(url);
     inserirDocumento(revista);
     cout<<"\n::: Revista Inserida com sucesso! :::\n"<<endl;
 }
+
 //metodo para validar a cota
 int Biblioteca::validarCota()
 {
@@ -255,10 +444,32 @@ int Biblioteca::validarCota()
     do{
         cout << "Cota: ";
         cin >> cota;
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
         if(cota < 0 || cota > 10)
             cout<<"Cota Invalida"<<endl;
     }while(cota < 0 || cota >    10);
     return cota;
+}
+
+Leitor* Biblioteca::inserirNovoLeitor(string nomeLeitor) {
+    Leitor* leitor = NULL;
+    string opcao;
+    cout << ":: Novo Leitor. Escolha a sua categoria atraves da letra!" << endl;
+    printf("i.%s   ii.%s   iii.%s   iv.%s", "Professor (P)", "Estudante (E)", "Funcionario (F)", "Outors(O)\n");
+    cout << "Opcao: ";
+    cin >> opcao;
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
+    cout << endl;
+    // Criacao do novo leitor e adicionar ao catalogo
+    leitor = new Leitor(nomeLeitor, opcao, "HOje", 100);
+    inserirLeitor(leitor);
+    return  leitor;
 }
 
 void Biblioteca::emprestarLivro() {
@@ -267,27 +478,20 @@ void Biblioteca::emprestarLivro() {
     string opcao;
     int opcao2;
     cout << endl;
-    cout << "Nome: ";
+    cout << "Nome do Leitor: ";
     getline(cin, nomeLeitor);
     // Verificar a exitencia do letior no catalogo
     Leitor* leitor = findLeitor(nomeLeitor);
     // Caso nao exista, criar uma nova entrada para o leitor
     if(leitor == NULL){
-        cout << ":: Novo Leitor. Escolha a sua categoria atraves da letra!" << endl;
-        printf("i.%s   ii.%s   iii.%s   iv.%s", "Professor (P)", "Estudante (E)", "Funcionario (F)", "Outors(O)\n");
-        cout << "Opcao: ";
-        cin >> opcao;
-        cin.ignore();
-        cout << endl;
-        // Criacao do novo leitor e adicionar ao catalogo
-        leitor = new Leitor(nomeLeitor, opcao, "HOje", 100);
-        inserirLeitor(leitor);
+        // Inserir o leitor como um novo leitor para a biblioteca
+        leitor = inserirNovoLeitor(nomeLeitor);
     }
     cout << "Titulo: ";
     getline(cin, tituloLivro);
     Documento* doc = findDocumento(tituloLivro);
     Livro* livro = NULL;
-    if(doc->getTipo() == "Livro"){
+    if(doc != NULL && doc->getTipo() == "Livro"){
         livro = static_cast<Livro*>(doc);
     }
     // Caso tenha encontrado o livro
@@ -296,7 +500,10 @@ void Biblioteca::emprestarLivro() {
         livro->toString();
         cout << "Confirma? (1.Sim/0.Nao): ";
         cin >> opcao2;
-        cin.ignore();
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
 
         // confirma o livro e o leva emprestado
         if(opcao2 == 1){
@@ -313,10 +520,10 @@ void Biblioteca::emprestarLivro() {
 }
 
 void Biblioteca::receberLivro() {
-    string nome;
-    cout << "Nome: ";
-    getline(cin, nome);
-    Leitor* leitor = findLeitor(nome);
+    string nomeLeitor;
+    cout << "Nome do leitor: ";
+    getline(cin, nomeLeitor);
+    Leitor* leitor = findLeitor(nomeLeitor);
     //::>> Caso encontre o leitor
     if(leitor != NULL){
         receberLivro(leitor);
@@ -342,7 +549,10 @@ void Biblioteca::receberLivro(Leitor *leitor) {
     cout << "===============================" << endl << endl;
     cout << "Escolha o livro: ";
     cin >> opcao;
-    cin.ignore();
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
 
     // verificar as opcoes escolhidas
     if(opcao > leitor->getLivrosLevados()){
@@ -354,11 +564,43 @@ void Biblioteca::receberLivro(Leitor *leitor) {
     // Pegar o exemplar do livro partindo do codigo do exemplar
     int codigoExemplar = leitor->getExemplaresLivro()[opcao - 1].getCodio();
     ExemplarLivro* exemplarLivro = leitor->devolverLivro(codigoExemplar);
-    guardarLivro(exemplarLivro); // guardar o livro na biblioteca
+    guardarLivroNaPilha(exemplarLivro); // guardar o exemplar na pilha de devolucoes
 
 }
 
 //============================= METODOS DE ACESSO DIRECTO DIRECA ==============================
+void Biblioteca::consultarDocumento(Leitor *leitor, Documento *doc) {
+
+    // Verificar seo leitor nao possui um documento que esteja a consultar
+    if(leitor->getDocEmConsulta() == NULL){
+        if(doc->getCota() > 0){
+            doc->cederLivroConsulta(leitor);
+            cout << "\n\n::: Livro Emprestado para Consulta :::\n\n";
+        } else {
+            cout << "::: Documento nao possui exemplares disponiveis no momento! :::";
+        }
+    } else {
+        cout << "\n::: Devola o documento que esta em consulta para levar o outro ::::\n";
+    }
+}
+
+void Biblioteca::devolverDocConsulta(Leitor *leitor) {
+
+    if(leitor->getDocEmConsulta() != NULL){
+        Documento* doc = leitor->getDocEmConsulta()->getDocumento();
+        cout << "\n\n=================================================" << endl;
+        printf("%-20s %-25s %-25s %-15s %10s\n", "Codigo", "Titulo", "Editora", "Exemplares", "Tipo");
+        doc->toString();
+        cout << "=================================================\n\n" << endl;
+        doc->retornarLivroConsulta(leitor);
+        cout << "::: Documento Devolvido :::";
+    } else {
+        cout << "\n\n::: LEITOR NAO POSSUI ALGUM DOCUMENTO EM CONSULTA :::\n\n";
+    }
+
+}
+
+
 void Biblioteca::removerDocumento(int hash, int codigo) {
 
     //::>> Verificar se tem um livro atras e em frente
@@ -393,7 +635,6 @@ void Biblioteca::removerDocumento(int hash, int codigo) {
 
     cout << "\n:::::: DOCUMENTO REMOVIDO ::::::\n" << endl;
 }
-
 
 void Biblioteca::removerAutor(Autor *autor) {
     char key = autor->getNome()[0];
@@ -430,7 +671,10 @@ void Biblioteca::executarImpressoes() {
     }
     cout << "Escolha a opcao: ";
     cin >> opcao;
-    cin.ignore();
+    //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //::::::
 
     if(opcao == 1){
         cout << "=================================================" << endl;
@@ -443,7 +687,10 @@ void Biblioteca::executarImpressoes() {
     } else if (opcao == 3){
         cout << "\n Listar por ordem de:\n1.Tema ou Assunto\n2.Titulo\nOpcao: ";
         cin >> opcao;
-        cin.ignore();
+        //::>> CASO INSIRA UMA OPCAO INVALIDA ESTE EVITARA UM LOOP INFINITO
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //::::::
         imprimirTodosLivrosEmOrdem(opcao);
 
     } else {
@@ -466,7 +713,7 @@ void Biblioteca::imprimirTodosDocumentos() {
 }
 
 void Biblioteca::imprimirTodosLivrosEmOrdem(int option) {
-
+    printf("%-20s %-25s %-25s %-15s %10s\n", "Codigo", "Titulo", "Editora", "Exemplares", "Tipo");
     FilaDocumento* filaDocumento = new FilaDocumento();
     for(int i = 0; i < MAX_CAPACITY; i++){
         EntradaDoc* entradaDoc = livros[i];
@@ -496,6 +743,10 @@ void Biblioteca::guardarLivro(ExemplarLivro *exemplarLivro) {
     cout << "=== Livro Devolvido ===";
 }
 
+void Biblioteca::guardarLivroNaPilha(ExemplarLivro *exemplarLivro) {
+    pilhaExemplares->enqueue(exemplarLivro);
+}
+
 int Biblioteca::hash(string str) {
     // Converter o str para lowercase
     for_each(str.begin(), str.end(), [](char & c) {
@@ -521,6 +772,7 @@ void Biblioteca::inserirDocumento(Documento *doc) {
     }
 
     string titulo = doc->getTitulo();
+    transform(titulo.begin(), titulo.end(), titulo.begin(), ::tolower); // converter para lowercase
     int hashCode = hash(titulo);
     EntradaDoc* newDoc = new EntradaDoc();
     newDoc->documento = doc;
@@ -546,7 +798,6 @@ void Biblioteca::inserirLeitor(Leitor *leitor) {
 
 }
 
-
 void Biblioteca::inserirLivro(Livro *doc) {
     //::>> Verificar se esta cheio
     if(isFull()){
@@ -555,6 +806,7 @@ void Biblioteca::inserirLivro(Livro *doc) {
     }
 
     string titulo = doc->getTitulo();
+    transform(titulo.begin(), titulo.end(), titulo.begin(), ::tolower); // converter para lowercase
     int hashCode = hash(titulo);
     EntradaDoc *newDoc = new EntradaDoc();
     newDoc->documento = doc;
@@ -594,6 +846,7 @@ void Biblioteca::inserirAutor(Autor *autor) {
 
 }
 
+
 Autor* Biblioteca::findAutor(string nome) {
     char key = nome[0];
     char pos = toupper(key) - toupper('a');
@@ -613,12 +866,17 @@ Autor* Biblioteca::findAutor(string nome) {
 }
 
 Leitor* Biblioteca::findLeitor(string nome) {
+    transform(nome.begin(), nome.end(), nome.begin(), ::tolower); // converter para lowercase
+    string nLeiGuard; // nome do leitor guardado
     char key = nome[0];
-    char pos = toupper(key) - toupper('a');
+    char pos = key - 'a';
     EntradaLeitor* entradaLeitor = leitores[pos];
     if(entradaLeitor != NULL){
         while(entradaLeitor !=  NULL){
-            if(entradaLeitor->leitor->getNome() == nome){
+            //::>> transformar o nome do leitor guardado em lowercase
+            nLeiGuard = entradaLeitor->leitor->getNome();
+            transform(nLeiGuard.begin(), nLeiGuard.end(), nLeiGuard.begin(), ::tolower); // converter para lowercase
+            if(nLeiGuard == nome){
                 return entradaLeitor->leitor;
             }
 

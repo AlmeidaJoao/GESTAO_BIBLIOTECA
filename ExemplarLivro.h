@@ -23,6 +23,7 @@ public:
     ~ExemplarLivro();
     Leitor* getUltimoLeitor();
     void setUtlimoLeitor(Leitor* leitor);
+    void toString();
 
 };
 

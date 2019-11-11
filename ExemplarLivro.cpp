@@ -30,3 +30,9 @@ Leitor* ExemplarLivro::getUltimoLeitor() {
 void ExemplarLivro::setUtlimoLeitor(Leitor *leitor) {
     this->ultimoLeitor = leitor;
 }
+
+void ExemplarLivro::toString(){
+    string titulo = documento->getTitulo();
+    string nomeUltimo = ultimoLeitor->getNome();
+    printf("%-10d %-20s %-30s\n", codigo, titulo.c_str(), nomeUltimo.c_str());
+}

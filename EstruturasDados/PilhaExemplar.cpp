@@ -29,3 +29,11 @@ void PilhaExemplar::enqueue(Exemplar *exemplar) {
     }
     size++;
 }
+
+Exemplar* PilhaExemplar::dequeue() {
+    EntradaExemplar* exemplar = cabeca;
+    Exemplar* exe = exemplar->exemplar;
+    cabeca = exemplar->proximoExemplar;
+    size--;
+    return exe;
+}
